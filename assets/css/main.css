@@ -3249,7 +3249,7 @@ input, select, textarea {
 			#wrapper > .bg.fixed {
 				position: fixed;
 				width: 100vw;
-				height: 100vw;
+				height: 100vh;
 			}
 
 		#wrapper.fade-in:before {
@@ -3314,7 +3314,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 50vh;
+		min-height: 100vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3457,7 +3457,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 50vh;
+				min-height: 60vh;
 			}
 
 				#intro p br {
@@ -3474,7 +3474,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 50vh;
+				min-height: 80vh;
 			}
 
 				#intro h1 {
