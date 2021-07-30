@@ -7,16 +7,19 @@
     <body>
         <div class=mainBox>
             <div class=title1>Customer javascript test</div><br>
-            <form action="" method="get">
-                <div class=title2>Customer Name/Code:</div>
-                <div class=searchBox>
-                    <input type=text id=searchFor class=searchFor onkeyup="return findCustomers()" size=50>
-                    <div id='displayedData' class=displayedData></div> 
-                </div>
-            </form>
+            <div class=inputBox id=inputBox>
+                <form action="" method="get" onsubmit="return stopForm();">
+                    <div class=title2>Customer Name/Code:</div>
+                    <div class=searchBox>
+                        <input type=text id=searchFor class=searchFor onkeyup="return findCustomers();" size=40>
+                        <input type=submit onclick="return renderIFrame();">
+                        <div id='displayedData' class=displayedData></div> 
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
     <script>
-        findCustomers()
+        findCustomers();
     </script>
 </html>

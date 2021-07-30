@@ -30,3 +30,10 @@ function pickCustomer(itemToFind) {
         }
     }  
 }
+function stopForm() {
+    return false;
+}
+function renderIFrame() {
+    document.getElementById('inputBox').style.display = 'none';
+    return false;
+}

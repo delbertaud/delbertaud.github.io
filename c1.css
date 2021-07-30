@@ -1,7 +1,6 @@
 .mainBox { 
     width: 800px; 
     margin: 0 auto;
-    height: 800px;
     text-align: center;
 }
 div .title1 {
@@ -12,10 +11,14 @@ div .title2 {
     font-size: 24px;
     font-weight: bold;
 }
+div .inputBox {
+    display: block;
+}
 div .searchBox {
     margin: 0 auto;
     width: 400px;
     text-align: left;
+    display: block;
 }
 div .searchBox input .searchFor {
     size: 60;
@@ -23,6 +26,7 @@ div .searchBox input .searchFor {
 div .displayedData {
     border-style: solid;
     border-width: 1px;
+    width: 310px;
 }
 div .searchTable {
     cursor: pointer; 
