@@ -1,23 +1,29 @@
-body {
+.mainBox { 
+    width: 800px; 
+    margin: 0 auto;
+    height: 800px;
     text-align: center;
 }
-x.mainBox { 
-    width: 400px;
-    text-align: center;
-}
-x.searchBox {
-    text-align: left;
-}
-x.title1 {
-    font-size: 30px;
+div .title1 {
+    font-size: 36px;
     font-weight: bold;
 }
-x.title2 {
-    font-size: 16px;
+div .title2 {
+    font-size: 24px;
+    font-weight: bold;
 }
-x.searchTable {
+div .searchBox {
+    margin: 0 auto;
+    width: 400px;
     text-align: left;
+}
+div .searchBox input .searchFor {
+    size: 60;
+}
+div .displayedData {
+    border-style: solid;
+    border-width: 1px;
+}
+div .searchTable {
     cursor: pointer; 
-    border: 1px solid black;
-    border-collapse: collapse;
 }

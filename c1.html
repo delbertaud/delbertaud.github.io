@@ -8,15 +8,15 @@
         <div class=mainBox>
             <div class=title1>Customer javascript test</div><br>
             <form action="" method="get">
+                <div class=title2>Customer Name/Code:</div>
                 <div class=searchBox>
-                    <div class=title2>Customer Name/Code:</div>
-                    <input type=text 
-                        id=searchFor 
-                        class=searchFor 
-                        onkeyup="return findCustomers()" size=40>
+                    <input type=text id=searchFor class=searchFor onkeyup="return findCustomers()" size=50>
                     <div id='displayedData' class=displayedData></div> 
                 </div>
             </form>
         </div>
     </body>
+    <script>
+        findCustomers()
+    </script>
 </html>
