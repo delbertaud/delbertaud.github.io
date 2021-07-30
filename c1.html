@@ -1,52 +1,22 @@
 <html>
     <head>
-        <style>
-            .searchTable {
-                cursor: pointer; 
-                border: 1px solid black;
-            }
-        </style>
-        <script src="companies.js"></script>
-        <script>
-            content = ""
-            function findCustomers() {
-                searchForValue = document.getElementById('searchFor').value.toLowerCase();
-                content = "<table id=searchTable";
-                companies.forEach(checkContains);
-                content += "</table>";
-                document.getElementById("displayedData").innerHTML = content;
-                return false;
-                }
-            function checkContains(item, index) {
-                if (item.toLowerCase().includes(searchForValue)) {
-                    fields = item.split(":");
-                    ccCode = fields[1].trim();
-                    line = "<tr><td><div onclick=pickCustomer(item1)>item2</div></td></tr>";
-                    line = line.replace("item1", "'" + ccCode + "'");
-                    line = line.replace("item2", item);
-                    content += line;
-                }
-            }
-            function pickCustomer(itemToFind) {
-                for (index in companies) {
-                    if (companies[index].includes(itemToFind)) {
-                        document.getElementById("searchFor").value = companies[index];
-                        break;
-                    }
-                }
-                
-            }
-        </script>
+        <link rel="stylesheet" href="c1.css">
+        <script src="c1.js"></script>
+         <script src="companies.js"></script>
     </head>
     <body>
-        <h3>Customer javascript test</h3>
-        <form action="" method="get">
-            Customer Name/Code: 
-            <div>
-                <input type=text id=searchFor onkeyup="return findCustomers()" size=60></input><br>
-                <div id='displayedData'></div> 
-            </div>
-        </form>
-        <br>
+        <div class=mainBox>
+            <div class=title1>Customer javascript test</div><br>
+            <form action="" method="get">
+                <div class=searchBox>
+                    <div class=title2>Customer Name/Code:</div>
+                    <input type=text 
+                        id=searchFor 
+                        class=searchFor 
+                        onkeyup="return findCustomers()" size=40>
+                    <div id='displayedData' class=displayedData></div> 
+                </div>
+            </form>
+        </div>
     </body>
 </html>
