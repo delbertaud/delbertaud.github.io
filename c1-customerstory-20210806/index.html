@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<title>Search page</title>
+		<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+		<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+		<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+		<script src="js/c1.js"></script>
+        <script src="js/companies.js"></script>
+        <script src="js/webpage.js"></script>
+	</head>
+	<body>		
+		<div class="bg d-flex">
+			<div class="col-12 col-md-9 col-lg-7 col-xl-5 mx-auto pt-7">
+				<div class="heading text-center">Welcome To The <span class="s-blue">Customer Story</span></div><br>
+				<!-- <form class="form-inline" action="/action_page.php">					
+					<input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+					<button type="submit" class="btn btn-primary mb-2">Submit</button>
+				</form> -->
+				<form class="form-horizontal">
+					<div class=mainBox>						
+						<div class=inputBox id=inputBox>
+							<form class="form-inline" method="get">	
+								<h5 class="text-center">Company Code - Name</h5>	
+								<input type="text" class="form-control mr-sm-2" autocomplete="off" id="searchFor" placeholder="Enter Company Code - Name" onClick="addClass()" onkeyup="return findCustomers();" >
+								<div id='displayedData' class=displayedData></div> 
+								<!-- <a href="result.html"><input type=submit class="btn btn-primary mt-2 float-right login_btn"></a> -->	
+								<p><a href="result.html" class="btn btn-blue mt-2 float-right login_btn">Submit</a></p>
+							</form>							
+						</div>
+					</div>					
+				</form>									
+			</div>						
+		</div>	   
+		<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+		<script type='text/javascript'></script>
+		<script>
+			findCustomers();
+		</script>			
+	</body>
+</html>
