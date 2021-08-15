@@ -1,6 +1,6 @@
 function findCompanies() {
     searchForValue = document.getElementById('searchFor').value.toLowerCase();
-    url = "http://143.244.149.221:8000/" + searchForValue;
+    url = "https://c1apitest.delbertaud.com/" + searchForValue;
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
