@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="test.js"></script>
+    </head>
+    <body>
+        <div class=mainBox>
+            <div class=title1>Customer javascript test</div><br>
+            <div class=inputBox id=inputBox>
+                <form action="" method="get" onsubmit="return stopForm();">
+                    <div class=title2>Customer Name or Code:</div>
+                    <div class=searchBox>
+                        <input type=text id=searchFor class=searchFor onkeyup="return findCompanies();" size=40>
+                        <input type=submit onclick="return renderIFrame();"><br />
+                        <select id="companies" size="20">
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+	
