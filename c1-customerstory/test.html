@@ -1,23 +1,54 @@
 <html>
     <head>
-        <script src="test.js"></script>
+        <style>
+            table tr th {text-align: center;}
+            table tr td {vertical-align: top;}
+        </style>
     </head>
     <body>
-        <div class=mainBox>
-            <div class=title1>Customer javascript test</div><br>
-            <div class=inputBox id=inputBox>
-                <form action="" method="get" onsubmit="return stopForm();">
-                    <div class=title2>Customer Name or Code:</div>
-                    <div class=searchBox>
+        <center>
+            <table width='670px'>
+                <tr><th colspan="3">
+                    Customer Name or Code:<br />
+                    <hr />
+                </td></tr>
+                <tr>
+                    <td width='300px'>
                         <input type=text id=searchFor class=searchFor onkeyup="return findCompanies();" size=40>
-                        &nbsp;
-                        <select id="companies" size="20"></select>
-                        &nbsp;
-                        <input type=submit onclick="return renderIFrame();">
-                    </div>
-                </form>
-            </div>
-        </div>
+                    </td>
+                    <td width='300px'>
+                        <select id="companies" size="20" width='290px' on></select>
+                    </td>
+                    <td width='50px'>
+                        <input type=submit onclick='alert("button clicked"); false;''>
+                    </td>
+                </tr>
+            </table>
+        </center>
     </body>
+    <script>
+        function findCompanies() {
+            searchForValue = document.getElementById('searchFor').value.toLowerCase();
+            url = "https://c1apitest.delbertaud.com/" + searchForValue;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    findCompaniesCallBack(xmlHttp.responseText);
+                }
+            }
+            xmlHttp.open("GET", url, true); 
+            xmlHttp.send(null);
+            return false;
+        }
+
+        function findCompaniesCallBack(response) {
+            contents = ""
+            data = JSON.parse(response);
+            data.forEach(function(element) {
+                contents += "<option value='element'>" + element + "</option>"
+            });
+            document.getElementById("companies").innerHTML = contents;
+        }
+    </script>
 </html>
 	
