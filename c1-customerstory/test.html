@@ -18,14 +18,19 @@
                     <hr />
                 </td></tr>
                 <tr>
+                    <th>Filter</th>
+                    <th>Customer List</th>
+                    <th>Action Button</th>
+                </tr>
+                <tr>
                     <td width='300px'>
-                        <input type=text id=searchFor class=searchFor onkeyup="return findCompanies();" size=40>
+                        <input id=searchFor type=text class=searchFor onkeyup="return findCompanies();" size=40>
                     </td>
                     <td width='300px'>
-                        <select id="companies" size="20" width='290px' on></select>
+                        <select id="companies" size="20" width='290px' onchange="return copyFromListToTextbox()"></select>
                     </td>
                     <td width='50px'>
-                        <input type=submit onclick='alert("button clicked"); false;''>
+                        <input id='submit' type=submit disabled onclick='alert("button clicked"); false;''>
                     </td>
                 </tr>
             </table>
@@ -33,6 +38,7 @@
     </body>
     <script>
         function findCompanies() {
+            document.getElementById('submit').disabled = true;
             searchForValue = document.getElementById('searchFor').value.toLowerCase();
             url = "https://c1apitest.delbertaud.com/" + searchForValue;
             var xmlHttp = new XMLHttpRequest();
@@ -52,6 +58,17 @@
                 contents += "<option value='element'>" + element + "</option>"
             });
             document.getElementById("companies").innerHTML = contents;
+        }
+        function copyFromListToTextbox() {
+            e = document.getElementById("companies");
+            if (e.selectedIndex != -1) {
+                fieldValue = e.selectedOptions[0].innerText;
+                fieldArray = fieldValue.split(":")
+                document.getElementById("searchFor").value = fieldArray[0];
+                document.getElementById('submit').disabled = false;
+            } else {
+                document.getElementById('submit').disabled = true;
+            }
         }
     </script>
 </html>
