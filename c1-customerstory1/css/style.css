@@ -7,14 +7,14 @@
 /** tokeninputs **/
 /* Example tokeninput style #1: Token vertical list*/
 ul.token-input-list {overflow: hidden;height: auto !important;height: 1%;border: 1px solid #999;cursor: text;
-font-size: 12px;z-index: 999;margin: 0;padding: 0;background-color: #fff;list-style-type: none;clear: left;border-radius: 4px;height: 38px !important;}
+font-size: 12px;z-index: 999;margin: 0;padding: 0;background-color: #fff;list-style-type: none;clear: left;border-radius: 4px;height: 38px !important;width:100%;}
 ul.token-input-list li {list-style-type: none;padding: 6px;font-size:15px;}
 ul.token-input-list li input {border: 0;width: 100%;background-color: white;}
 li.token-input-token {overflow: hidden;height: auto !important;height: 1%;padding: 6px 5px;color: #000;cursor: default;display: block;}
 li.token-input-token p {float: left;padding: 0;margin: 0;font-size: 1rem;line-height: 1.5;color: #495057;}
 /* li.token-input-token span {float: right;color: #777;cursor: pointer;} */
 
-div.token-input-dropdown {position: absolute;width: 400px;background-color: #fff;overflow: hidden;border-left: 1px solid #ccc;
+div.token-input-dropdown {position: absolute;width: 420px;background-color: #fff;overflow: hidden;border-left: 1px solid #ccc;
 border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;cursor: default;font-size: 15px;font-weight:300;z-index: 1;border-radius:0px 0px 4px 4px;}
 div.token-input-dropdown p {margin: 0;padding: 5px;color: #000;}
 div.token-input-dropdown ul {margin: 0;padding: 0;}
@@ -28,6 +28,8 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-co
 @media only screen and (max-width: 767px) {
 	.displayedData{background: #ebebeb;width: 100%;}
 	.bg{min-height:100vh;}
+	/* ul.token-input-list {width:100%;}
+	.token-input-dropdown{width:315px !important;} */
 }
 .card-body{box-shadow:0px 8px 16px rgb(0 0 0 / 11%)}
 .btn-custom {color: #000;background-color: #bed1e0;border-color: #bed1e0;}
@@ -41,28 +43,9 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-co
 .searh-page .navbar-light .navbar-nav .nav-link:focus, .searh-page .navbar-light .navbar-nav .nav-link:hover {color: #01abef;}
 .searh-page .navbar-light .navbar-nav .nav-link:focus, .searh-page .navbar-light .navbar-nav .nav-link:hover {color: #01abef;}
 
-.token-input-input-token input::-webkit-input-placeholder {/* Chrome/Opera/Safari/Edge */
-	color:#000;
-}
+.whitebg{background: #fff;color: #01215a;font-size: 16px;line-height: 30px;font-weight: normal;padding: 15px;border-radius:4px;}
 
-input::-ms-input-placeholder { /* Microsoft Edge */
-   /*styles here*/
-}
-
-input:-ms-input-placeholder {/* IE 10+ */
-	/*styles here*/
-}
-
-input::-moz-placeholder {/* Firefox 19+ */
-	opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
-	/*styles here*/
-}
-
-input:-moz-placeholder {/* Firefox 18- */
-	opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
-	/*styles here*/
-}
-
-input::placeholder {
-	/*styles here*/
-}
+.select-dropdown{width:100%;}
+.select2-selection{height:38px !important;}
+.select2-container--default .select2-selection--single .select2-selection__arrow {top: 5px !important;}
+.width{width:100%;}
