@@ -6,29 +6,46 @@
     -->
     <head>
         <style>
+            table {margin-left: auto; margin-right: auto;}
             table tr th {text-align: center;}
             table tr td {vertical-align: top;}
-            #searchDiv {visibility: visible;}
-            #aboutDiv {visibility: hidden;}
-            #iframeDiv {visibility: hidden;}
+            #searchDiv {
+                    visibility: visible; 
+                    vertical-align: top; 
+                    text-align: center; 
+                    width: 700px;
+                    margin-left: auto; 
+                    margin-right: auto;
+                }
+            #aboutDiv {
+                    visibility: hidden; 
+                    vertical-align: top; 
+                    text-align: center; 
+                    width: 700px;
+                    margin-left: auto; 
+                    margin-right: auto;
+                }
+            #iframeDiv {
+                    visibility: hidden; 
+                    vertical-align: top; 
+                    text-align: center; 
+                    width: 700px;
+                    margin-left: auto; 
+                    margin-right: auto;
+                }
         </style>
     </head>
     <body>
         <div id="searchDiv">
             <button id="showAboutButton" >Show About</button>
-            <table width="670px" align="center">
-                <tr><th colspan="3">
-                    Customer Name or Code:<br />
-                    <hr />
-                </td></tr>
+            <table width="670px">
                 <tr>
-                    <th>Filter</th>
-                    <th>Customer List</th>
-                    <th>Action Button</th>
+                    <th>Filter Customer Name or Code:</th>
+                    <th>Select Customer:</th>
                 </tr>
                 <tr>
                     <td width="300px"><input id="searchForTextbox" type="text" size="40"></td>
-                    <td width="300px"><select id="companiesList" size="20" width="290px"></select></td>
+                    <td width="300px"><select id="companyList" size="20" width="290px"></select></td>
                     <td width="50px"><button id="submitButton">Submit</button></td>
                 </tr>
             </table>
@@ -47,14 +64,13 @@
     </body>
     <script>
         document.getElementById("searchForTextbox").addEventListener("keyup", findCompanies);
-        document.getElementById("companiesList").addEventListener("change", copyFromListToTextbox);
-        document.getElementById("companiesList").addEventListener("focusin", makeFirstSelection);
+        document.getElementById("companyList").addEventListener("change", copyFromListToTextbox);
+        document.getElementById("companyList").addEventListener("focusin", makeFirstSelection);
         document.getElementById("submitButton").addEventListener("click", showIFrameDiv);
         document.getElementById("showAboutButton").addEventListener("click", showAboutDiv)
         document.getElementById("closeAboutButton").addEventListener("click", closeAboutDiv)
         document.getElementById("closeIFrameButton").addEventListener("click", closeIFrameDiv)
         findCompanies();
-
         function findCompanies() {
             document.getElementById("submitButton").disabled = true;
             searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
@@ -73,19 +89,19 @@
             contents = ""
             data = JSON.parse(response);
             data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
-            document.getElementById("companiesList").innerHTML = contents;
+            document.getElementById("companyList").innerHTML = contents;
         }
         function copyFromListToTextbox() {
             submitButtonDisabled = true;
-            if (document.getElementById("companiesList").selectedIndex != -1) {
-                document.getElementById("searchForTextbox").value = document.getElementById("companiesList").selectedOptions[0].innerText.split(":")[0]
+            if (document.getElementById("companyList").selectedIndex != -1) {
+                document.getElementById("searchForTextbox").value = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[0]
                 submitButtonDisabled = false;
             }
             document.getElementById("submitButton").disabled = submitButtonDisabled;
         }
         function makeFirstSelection() {
-            if (document.getElementById("companiesList").selectedIndex == -1) {
-                document.getElementById("companiesList").selectedIndex = 0;
+            if (document.getElementById("companyList").selectedIndex == -1) {
+                document.getElementById("companyList").selectedIndex = 0;
                 copyFromListToTextbox();
             }
         }
@@ -100,13 +116,21 @@
         function showIFrameDiv() {
             document.getElementById("searchDiv").style.visibility = "hidden";
             document.getElementById("iframeDiv").style.visibility = "visible";
-            customerCode = document.getElementById("companiesList").selectedOptions[0].innerText.split(":")[1]
+            customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
             document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here."
             document.getElementById("iFrameURL").src = "page1.html?" + customerCode
         }
         function closeIFrameDiv() {
             document.getElementById("iframeDiv").style.visibility = "hidden";
             document.getElementById("searchDiv").style.visibility = "visible";
+        }
+        document.getElementById("companyList").onkeypress = function(e) {
+            if (!e) e = window.event;
+            keyCode = e.code || e.key;
+            if (keyCode == "Enter" || keyCode == "NumpadEnter"){
+                showIFrameDiv()
+                return false;
+            }
         }
     </script>
 </html>
