@@ -8,11 +8,15 @@
         <style>
             table tr th {text-align: center;}
             table tr td {vertical-align: top;}
+            #searchDiv {visibility: visible;}
+            #aboutDiv {visibility: hidden;}
+            #iframeDiv {visibility: hidden;}
         </style>
     </head>
     <body>
-        <center>
-            <table width='670px'>
+        <div id="searchDiv">
+            <button id="showAboutButton" >Show About</button>
+            <table width="670px" align="center">
                 <tr><th colspan="3">
                     Customer Name or Code:<br />
                     <hr />
@@ -23,23 +27,37 @@
                     <th>Action Button</th>
                 </tr>
                 <tr>
-                    <td width='300px'>
-                        <input id=searchFor type=text class=searchFor onkeyup="return findCompanies();" size=40>
-                    </td>
-                    <td width='300px'>
-                        <select id="companies" size="20" width='290px' onchange="return copyFromListToTextbox()"></select>
-                    </td>
-                    <td width='50px'>
-                        <input id='submit' type=submit disabled onclick='alert("button clicked"); false;''>
-                    </td>
+                    <td width="300px"><input id="searchForTextbox" type="text" size="40"></td>
+                    <td width="300px"><select id="companiesList" size="20" width="290px"></select></td>
+                    <td width="50px"><button id="submitButton">Submit</button></td>
                 </tr>
             </table>
-        </center>
+        </div>
+        <div id="aboutDiv">
+            This is the about section<br>
+            <button id="closeAboutButton" >Close About</button><br />
+            <iframe id="iFrameURL" src='about.html' width="800px;"></iframe>
+        </div>
+        <div id="iframeDiv">
+            This is the iframe section<br>
+            <div id="customerCodeDiv"></div>
+            <button id="closeIFrameButton" >Close IFrame</button><br />
+            <iframe id="iFrameURL" src='' width="800px;"></iframe>
+        </div>
     </body>
     <script>
+        document.getElementById("searchForTextbox").addEventListener("keyup", findCompanies);
+        document.getElementById("companiesList").addEventListener("change", copyFromListToTextbox);
+        document.getElementById("companiesList").addEventListener("focusin", makeFirstSelection);
+        document.getElementById("submitButton").addEventListener("click", showIFrameDiv);
+        document.getElementById("showAboutButton").addEventListener("click", showAboutDiv)
+        document.getElementById("closeAboutButton").addEventListener("click", closeAboutDiv)
+        document.getElementById("closeIFrameButton").addEventListener("click", closeIFrameDiv)
+        findCompanies();
+
         function findCompanies() {
-            document.getElementById('submit').disabled = true;
-            searchForValue = document.getElementById('searchFor').value.toLowerCase();
+            document.getElementById("submitButton").disabled = true;
+            searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
             url = "https://c1apitest.delbertaud.com/" + searchForValue;
             var xmlHttp = new XMLHttpRequest();
             xmlHttp.onreadystatechange = function() { 
@@ -54,21 +72,41 @@
         function findCompaniesCallBack(response) {
             contents = ""
             data = JSON.parse(response);
-            data.forEach(function(element) {
-                contents += "<option value='element'>" + element + "</option>"
-            });
-            document.getElementById("companies").innerHTML = contents;
+            data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
+            document.getElementById("companiesList").innerHTML = contents;
         }
         function copyFromListToTextbox() {
-            e = document.getElementById("companies");
-            if (e.selectedIndex != -1) {
-                fieldValue = e.selectedOptions[0].innerText;
-                fieldArray = fieldValue.split(":")
-                document.getElementById("searchFor").value = fieldArray[0];
-                document.getElementById('submit').disabled = false;
-            } else {
-                document.getElementById('submit').disabled = true;
+            submitButtonDisabled = true;
+            if (document.getElementById("companiesList").selectedIndex != -1) {
+                document.getElementById("searchForTextbox").value = document.getElementById("companiesList").selectedOptions[0].innerText.split(":")[0]
+                submitButtonDisabled = false;
             }
+            document.getElementById("submitButton").disabled = submitButtonDisabled;
+        }
+        function makeFirstSelection() {
+            if (document.getElementById("companiesList").selectedIndex == -1) {
+                document.getElementById("companiesList").selectedIndex = 0;
+                copyFromListToTextbox();
+            }
+        }
+        function showAboutDiv() {
+            document.getElementById("searchDiv").style.visibility = "hidden";
+            document.getElementById("aboutDiv").style.visibility = "visible";
+        }
+        function closeAboutDiv() {
+            document.getElementById("aboutDiv").style.visibility = "hidden";
+            document.getElementById("searchDiv").style.visibility = "visible";
+        }
+        function showIFrameDiv() {
+            document.getElementById("searchDiv").style.visibility = "hidden";
+            document.getElementById("iframeDiv").style.visibility = "visible";
+            customerCode = document.getElementById("companiesList").selectedOptions[0].innerText.split(":")[1]
+            document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here."
+            document.getElementById("iFrameURL").src = "page1.html?" + customerCode
+        }
+        function closeIFrameDiv() {
+            document.getElementById("iframeDiv").style.visibility = "hidden";
+            document.getElementById("searchDiv").style.visibility = "visible";
         }
     </script>
 </html>
