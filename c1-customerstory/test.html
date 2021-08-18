@@ -1,40 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
-    <!-- 
-        https://delbertaud.github.io/c1-customerstory 
-        https://delbertaud.github.io/c1-customerstory/test.html
-        https://c1apitest.delbertaud.com/
-    -->
     <head>
-        <style>
-            table {margin-left: auto; margin-right: auto;}
-            table tr th {text-align: left;}
-            table tr td {text-align: left; vertical-align: top;}
-            #searchDiv {
-                    visibility: visible; 
-                    vertical-align: top; 
-                    text-align: center; 
-                    width: 700px;
-                    margin-left: auto; 
-                    margin-right: auto;
-                }
-            #aboutDiv {
-                    visibility: hidden; 
-                    vertical-align: top; 
-                    text-align: center; 
-                    width: 700px;
-                    margin-left: auto; 
-                    margin-right: auto;
-                }
-            #contentIframeDiv {
-                    visibility: hidden; 
-                    vertical-align: top; 
-                    text-align: center; 
-                    width: 700px;
-                    margin-left: auto; 
-                    margin-right: auto;
-                }
-        </style>
+        <link rel="stylesheet" href="test.css">
     </head>
     <body>
         <div id="searchDiv">
@@ -62,76 +29,6 @@
             <iframe id="contentIFrameURL" src='' width="800px;"></iframe>
         </div>
     </body>
-    <script>
-        document.getElementById("searchForTextbox").addEventListener("keyup", findCompanies);
-        document.getElementById("companyList").addEventListener("change", copyFromListToTextbox);
-        document.getElementById("companyList").addEventListener("focusin", makeFirstSelection);
-        document.getElementById("submitButton").addEventListener("click", showContentIFrameDiv);
-        document.getElementById("showAboutButton").addEventListener("click", showAboutDiv)
-        document.getElementById("closeAboutButton").addEventListener("click", closeAboutDiv)
-        document.getElementById("closeContentIFrameButton").addEventListener("click", closeContentIFrameDiv)
-        findCompanies();
-        function findCompanies() {
-            document.getElementById("submitButton").disabled = true;
-            searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
-            url = "https://c1apitest.delbertaud.com/" + searchForValue;
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                    findCompaniesCallBack(xmlHttp.responseText);
-                }
-            }
-            xmlHttp.open("GET", url, true); 
-            xmlHttp.send(null);
-            return false;
-        }
-        function findCompaniesCallBack(response) {
-            contents = ""
-            data = JSON.parse(response);
-            data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
-            document.getElementById("companyList").innerHTML = contents;
-        }
-        function copyFromListToTextbox() {
-            submitButtonDisabled = true;
-            if (document.getElementById("companyList").selectedIndex != -1) {
-                document.getElementById("searchForTextbox").value = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[0]
-                submitButtonDisabled = false;
-            }
-            document.getElementById("submitButton").disabled = submitButtonDisabled;
-        }
-        function makeFirstSelection() {
-            if (document.getElementById("companyList").selectedIndex == -1) {
-                document.getElementById("companyList").selectedIndex = 0;
-                copyFromListToTextbox();
-            }
-        }
-        function showAboutDiv() {
-            document.getElementById("searchDiv").style.visibility = "hidden";
-            document.getElementById("aboutDiv").style.visibility = "visible";
-        }
-        function closeAboutDiv() {
-            document.getElementById("aboutDiv").style.visibility = "hidden";
-            document.getElementById("searchDiv").style.visibility = "visible";
-        }
-        function showContentIFrameDiv() {
-            document.getElementById("searchDiv").style.visibility = "hidden";
-            document.getElementById("contentIframeDiv").style.visibility = "visible";
-            customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
-            document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here."
-            document.getElementById("contentIFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode
-        }
-        function closeContentIFrameDiv() {
-            document.getElementById("contentIframeDiv").style.visibility = "hidden";
-            document.getElementById("searchDiv").style.visibility = "visible";
-        }
-        document.getElementById("companyList").onkeypress = function(e) {
-            if (!e) e = window.event;
-            keyCode = e.code || e.key;
-            if (keyCode == "Enter" || keyCode == "NumpadEnter"){
-                showIFrameDiv()
-                return false;
-            }
-        }
-    </script>
+    <script src="test.js"></script>
 </html>
 	
