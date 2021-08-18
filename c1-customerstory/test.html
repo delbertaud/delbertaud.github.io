@@ -118,7 +118,8 @@
             document.getElementById("iframeDiv").style.visibility = "visible";
             customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
             document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here."
-            document.getElementById("iFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode
+            //document.getElementById("iFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode
+            document.getElementById("iFrameURL").src = "page1.html?" + customerCode
         }
         function closeIFrameDiv() {
             document.getElementById("iframeDiv").style.visibility = "hidden";
