@@ -8,8 +8,8 @@
     <head>
         <style>
             table {margin-left: auto; margin-right: auto;}
-            table tr th {text-align: center;}
-            table tr td {vertical-align: top;}
+            table tr th {text-align: left;}
+            table tr td {text-align: left; vertical-align: top;}
             #searchDiv {
                     visibility: visible; 
                     vertical-align: top; 
@@ -39,15 +39,14 @@
     <body>
         <div id="searchDiv">
             <button id="showAboutButton" >Show About</button>
-            <table width="670px">
+            <table width="360px">
                 <tr>
-                    <th>Filter Customer Name or Code:</th>
-                    <th>Select Customer:</th>
-                </tr>
-                <tr>
-                    <td width="300px"><input id="searchForTextbox" type="text" size="40"></td>
-                    <td width="300px"><select id="companyList" size="20" width="290px"></select></td>
-                    <td width="50px"><button id="submitButton">Submit</button></td>
+                    <th colspan=2>Customer Name or Code:</th>
+				</tr><tr>
+					<td width="300px" colspan=2><input id="searchForTextbox" type="text" size="35"></td>
+				</tr><tr>
+					<td width="300px"><select id="companyList" size="20" width="290px"></select></td>
+					<td width="50px"><button id="submitButton">Submit</button></td>
                 </tr>
             </table>
         </div>
