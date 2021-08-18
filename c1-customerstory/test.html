@@ -26,7 +26,7 @@
                     margin-left: auto; 
                     margin-right: auto;
                 }
-            #iframeDiv {
+            #contentIframeDiv {
                     visibility: hidden; 
                     vertical-align: top; 
                     text-align: center; 
@@ -54,23 +54,23 @@
         <div id="aboutDiv">
             This is the about section<br>
             <button id="closeAboutButton" >Close About</button><br />
-            <iframe id="iFrameURL" src='about.html' width="800px;"></iframe>
+            <iframe id="aboutIFrameURL" src='about.html' width="800px;"></iframe>
         </div>
-        <div id="iframeDiv">
-            This is the iframe section<br>
+        <div id="contentIframeDiv">
+            This is the Content iframe section<br>
             <div id="customerCodeDiv"></div>
-            <button id="closeIFrameButton" >Close IFrame</button><br />
-            <iframe id="iFrameURL" src='' width="800px;"></iframe>
+            <button id="closeContentIFrameButton" >Close Content IFrame</button><br />
+            <iframe id="contentIFrameURL" src='' width="800px;"></iframe>
         </div>
     </body>
     <script>
         document.getElementById("searchForTextbox").addEventListener("keyup", findCompanies);
         document.getElementById("companyList").addEventListener("change", copyFromListToTextbox);
         document.getElementById("companyList").addEventListener("focusin", makeFirstSelection);
-        document.getElementById("submitButton").addEventListener("click", showIFrameDiv);
+        document.getElementById("submitButton").addEventListener("click", showContentIFrameDiv);
         document.getElementById("showAboutButton").addEventListener("click", showAboutDiv)
         document.getElementById("closeAboutButton").addEventListener("click", closeAboutDiv)
-        document.getElementById("closeIFrameButton").addEventListener("click", closeIFrameDiv)
+        document.getElementById("closeContentIFrameButton").addEventListener("click", closeContentIFrameDiv)
         findCompanies();
         function findCompanies() {
             document.getElementById("submitButton").disabled = true;
@@ -114,16 +114,15 @@
             document.getElementById("aboutDiv").style.visibility = "hidden";
             document.getElementById("searchDiv").style.visibility = "visible";
         }
-        function showIFrameDiv() {
+        function showContentIFrameDiv() {
             document.getElementById("searchDiv").style.visibility = "hidden";
-            document.getElementById("iframeDiv").style.visibility = "visible";
+            document.getElementById("contentIframeDiv").style.visibility = "visible";
             customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
             document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here."
-            //document.getElementById("iFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode
-            document.getElementById("iFrameURL").src = "page1.html?" + customerCode
+            document.getElementById("contentIFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode
         }
-        function closeIFrameDiv() {
-            document.getElementById("iframeDiv").style.visibility = "hidden";
+        function closeContentIFrameDiv() {
+            document.getElementById("contentIframeDiv").style.visibility = "hidden";
             document.getElementById("searchDiv").style.visibility = "visible";
         }
         document.getElementById("companyList").onkeypress = function(e) {
