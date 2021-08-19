@@ -15,7 +15,7 @@ function findCompanies() {
     }
     xmlHttp.open("GET", url, true); 
     xmlHttp.send(null);
-    return false;
+    return false; 
 }
 function findCompaniesCallBack(response) {
     contents = "";
