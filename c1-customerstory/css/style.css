@@ -1,4 +1,5 @@
 .bg{background-image:url(../assets/bg.jpg);max-height: 100%;min-height: 100vh;color:#fff;font-family: 'Oswald', sans-serif;background-size: cover;background-position: bottom center;}
+.about-bg{background-image:url(../assets/about-bg.jpg);max-height: 100%;min-height: 100vh;color:#fff;font-family: 'Oswald', sans-serif;background-size: cover;background-position: bottom center;}
 .s-blue {color: #00aeed;}
 .pt-7{padding-top: 5rem!important;}
 .heading{font-size: 40px;font-weight: 300;text-transform:uppercase;}
@@ -32,7 +33,9 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-co
 	.token-input-dropdown{width:315px !important;} */
 }
 .card-body{box-shadow:0px 8px 16px rgb(0 0 0 / 11%)}
-.btn-custom {color: #000;background-color: #bed1e0;border-color: #bed1e0;}
+.btn-custom {color: #000;background-color: #bed1e0;border-color: #bed1e0;cursor:default;}
+.btn-abt {color: #fff;background-color: transparent;border-color: #bed1e0;cursor:default;}
+.btn-home {color: #fff;background-color: transparent;border-color: #bed1e0;cursor:default;position: absolute;top: 0px;left: 80px;}
 .btn-blue {color: #fff;background-color: #01abef;border-color: #01abef;}
 .btn-blue:hover {color: #01abef;background-color: #fff;border-color: #01abef;}
 .content-wrapper {overflow-x: hidden;background: #f2f2f2;}
@@ -44,3 +47,18 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-co
 .searh-page .navbar-light .navbar-nav .nav-link:focus, .searh-page .navbar-light .navbar-nav .nav-link:hover {color: #01abef;}
 
 .whitebg{background: #fff;color: #01215a;font-size: 16px;line-height: 30px;font-weight: normal;padding: 15px;border-radius:4px;}
+
+.select-dropdown{width:100%;}
+.select2-selection{height:38px !important;}
+.select2-container--default .select2-selection--single .select2-selection__arrow {top: 5px !important;}
+.width{width:100%;}
+.adj{position:absolute;top:-145px;}
+.adj-h{height:38px;}
+
+#searchDiv {visibility: visible;vertical-align: top;text-align: center;margin-left: auto;margin-right: auto;}
+#aboutDiv {display:none;vertical-align: top;text-align: center;margin-left: auto;margin-right: auto;}
+#contentIframeDiv{display: none;vertical-align: top;text-align: center;margin-left: auto;margin-right: auto;}
+.z-border{border:0px;}
+option{background:#ebebeb;}
+input:focus{outline:none;}
+select:focus{outline:none;}
