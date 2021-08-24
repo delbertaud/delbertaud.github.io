@@ -15,7 +15,7 @@ function findCompanies() {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 //findCompaniesCallBack(xmlHttp.responseText);
                 contents = "";
-                data = JSON.parse(response);
+                data = JSON.parse(xmlHttp.responseText);
                 data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
                 document.getElementById("companyList").innerHTML = contents;
             }
