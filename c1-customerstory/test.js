@@ -7,13 +7,17 @@ function findCompanies() {
     document.getElementById("submitButton").disabled = true;
     searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
 
-    endpointToHit = "C1-2"
+    endpointToHit = "Delbert"
     if (endpointToHit == "Delbert") {
         url = "https://c1apitest.delbertaud.com/" + searchForValue;
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() { 
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                findCompaniesCallBack(xmlHttp.responseText);
+                //findCompaniesCallBack(xmlHttp.responseText);
+                contents = "";
+                data = JSON.parse(response);
+                data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
+                document.getElementById("companyList").innerHTML = contents;
             }
         }
         xmlHttp.open("GET", url, true); 
