@@ -6,15 +6,44 @@ findCompanies();
 function findCompanies() {
     document.getElementById("submitButton").disabled = true;
     searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
-    url = "https://c1apitest.delbertaud.com/" + searchForValue;
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            findCompaniesCallBack(xmlHttp.responseText);
+
+    endpointToHit = "C1-2"
+    if (endpointToHit == "Delbert") {
+        url = "https://c1apitest.delbertaud.com/" + searchForValue;
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                findCompaniesCallBack(xmlHttp.responseText);
+            }
         }
-    }
-    xmlHttp.open("GET", url, true); 
-    xmlHttp.send(null);
+        xmlHttp.open("GET", url, true); 
+        xmlHttp.send(null);
+    } else if (endpointToHit = "C1-1") {
+        url = "https://customerstory.onguard.convergeone.com/csapi/" + searchForValue;
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        xhr.onreadystatechange = function() { 
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                findCompaniesCallBack(xhr.responseText);
+            }
+        };
+        xhr.open("GET", url);
+        xhr.setRequestHeader("Authorization", "Basic Y3NhcGk6cDljVTRudkp4V0xSMTlFamJPSTA=");
+        xhr.send();	
+    } else if (endpointToHit == "C1-2") {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Basic Y3NhcGk6cDljVTRudkp4V0xSMTlFamJPSTA=");
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("https://customerstory.onguard.convergeone.com/csapi/", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+            }
     return false; 
 }
 function findCompaniesCallBack(response) {
