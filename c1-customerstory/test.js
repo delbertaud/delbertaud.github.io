@@ -13,7 +13,6 @@ function findCompanies() {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() { 
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                //findCompaniesCallBack(xmlHttp.responseText);
                 contents = "";
                 data = JSON.parse(xmlHttp.responseText);
                 data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
@@ -28,7 +27,10 @@ function findCompanies() {
         xhr.withCredentials = true;
         xhr.onreadystatechange = function() { 
             if (xhr.readyState == 4 && xhr.status == 200) {
-                findCompaniesCallBack(xhr.responseText);
+                contents = "";
+                data = JSON.parse(xhr.responseText);
+                data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
+                document.getElementById("companyList").innerHTML = contents;
             }
         };
         xhr.open("GET", url);
@@ -49,12 +51,6 @@ function findCompanies() {
         .catch(error => console.log('error', error));
     }
     return false; 
-}
-function findCompaniesCallBack(response) {
-    contents = "";
-    data = JSON.parse(response);
-    data.forEach(function(element) { contents += `<option value="${element}">${element}</option>` });
-    document.getElementById("companyList").innerHTML = contents;
 }
 
 document.getElementById("searchForTextbox").onkeyup = function(e) {
