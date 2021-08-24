@@ -7,7 +7,7 @@ function findCompanies() {
     document.getElementById("submitButton").disabled = true;
     searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
 
-    endpointToHit = 1
+    endpointToHit = 2
     if (endpointToHit == 1) {
         url = "https://c1apitest.delbertaud.com/" + searchForValue;
         var xmlHttp = new XMLHttpRequest();
