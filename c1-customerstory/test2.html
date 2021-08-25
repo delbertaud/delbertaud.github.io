@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<span id="show1">show div 1</span> - <span id="show2">show div 2</span> - <span id="show3">show div 2</span>
+<br /><br />
+ <div class="div1" style="display: block;">
+    div 1 data here
+ </div>
+ <div class="div2" style="display: none;">
+    div 2 data here
+ </div>
+ <div class="div3" style="display: none;">
+    div 2 data here
+ </div>
+ <script>
+    $(document).ready(function(){
+        $('#show1').click(function() {
+          $('.div1').toggle("slide");
+        });
+        $('#show2').click(function() {
+          $('.div2').toggle("slide");
+        });
+        $('#show3').click(function() {
+          $('.div3').toggle("slide");
+        });
+    });
+    </script>
+</body>
+</html>
