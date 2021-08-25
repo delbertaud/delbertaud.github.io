@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <link rel="stylesheet" href="test.css">
+    </head>
+    <body>
+        <div id="searchDiv"> 
+            <button id="showAboutButton" >Show About</button>
+            <table width="360px">
+                <tr>
+                    <th colspan=2>Customer Name & Code:</th>
+				</tr><tr>
+					<td width="300px" colspan=2><input id="searchForTextbox" type="text" size="35"></td>
+				</tr><tr>
+					<td width="300px"><select id="companyList" size="20" width="290px"></select></td>
+					<td width="50px"><button id="submitButton">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="aboutDiv">
+            This is the about section<br>
+            <button id="closeAboutButton" >Close About</button><br />
+            <iframe id="aboutIFrameURL" src='about.html' width="800px;"></iframe>
+        </div>
+        <div id="contentIframeDiv">
+            This is the Content iframe section<br>
+            <div id="customerCodeDiv"></div>
+            <button id="closeContentIFrameButton" >Close Content IFrame</button><br />
+            <iframe id="contentIFrameURL" src='' width="800px;"></iframe>
+        </div>
+    </body>
+    <script src="test.js"></script>
+</html>
+	
