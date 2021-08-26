@@ -1,4 +1,5 @@
-<!DOCTYPE html>  
+
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -78,9 +79,6 @@
 							<li class="nav-item mr-2">								
 								<button class="btn btn-custom btn-sm my-2 my-sm-0" id="closeContentIFrameButton">HOME</button>
 							</li>
-							<!-- <li class="nav-item mr-2">
-								<button class="btn btn-custom btn-sm my-2 my-sm-0" id="test1">DASHBOARD</button>
-							</li> -->
 							<li class="nav-item mr-2">
 								<button id="projects" class="btn btn-custom btn-sm my-2 my-sm-0">PROJECTS</button>
 							</li>
@@ -95,12 +93,8 @@
 				</nav>	
 				<hr class="mt-1 mb-1">
 					<div id="test">
-						<!-- <div id="customerCodeDiv"></div> -->
 						<iframe id="contentIFrameURL" src='' class="m-90" width="100%"></iframe>
 					</div>
-				<!-- <div id="newiframe">
-					<iframe src="https://delbertaud.github.io/c1-customerstory/page1.html" name="converse" scrolling="No" height="940px" width="100%" style="border: none;"></iframe>
-				</div> -->
 			</div>
 		</div>			
 	</div>	
@@ -113,12 +107,11 @@
 		document.getElementById("projects").addEventListener("click", chanagetoprojectsifarme)
 		document.getElementById("tickets").addEventListener("click", chanagetoticketsifarme)
 		document.getElementById("oppourtunities").addEventListener("click", chanagetooppourtunitiesifarme)		
-		//document.getElementById("test1").addEventListener("click", showdashboardifarme)
 		findCompanies();
 		function findCompanies() {
 			document.getElementById("submitButton").disabled = true;
 			searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
-			url = "https://c1apitest.delbertaud.com/" + searchForValue;
+			url = "https://customerstory.onguard.convergeone.com/csapi/" + searchForValue;
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.onreadystatechange = function() { 
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -176,9 +169,7 @@
 				document.getElementById("div1").style.display = "none";
 				document.getElementById("contentIframeDiv").style.display = "block";
 				customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
-				//document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here.";
 				chanagetoprojectsifarme()
-				//document.getElementById("contentIFrameURL").src = "comingsoon.html" + customerCode;
 			}
 			function closeContentIFrameDiv() {
 				document.getElementById("contentIframeDiv").style.display = "none";
@@ -186,31 +177,23 @@
 				
 			}
 			function chanagetoprojectsifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
 				document.getElementById("projects").style.color = "blue";
 				document.getElementById("tickets").style.color = "black";
 				document.getElementById("oppourtunities").style.color = "black";
-				document.getElementById("contentIFrameURL").src = "comingsoon.html";
+				document.getElementById("contentIFrameURL").src = "https://dashboard.onguard.convergeone.com/s/proservices/app/dashboards#/view/fe93f800-f942-11eb-8b4b-e5e8a06f8cf5?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-10y,to:now))&_a=(description:%27%27,filters:!((%27$state%27:(store:appState),query:(match_phrase:(CustomerId.keyword:"+customerCode+")))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:%27%27),timeRestore:!t,title:%27Account%20Project%20Overview%27,viewMode:view)";
 			}
 			function chanagetoticketsifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
 				document.getElementById("projects").style.color = "black";
 				document.getElementById("tickets").style.color = "blue";
 				document.getElementById("oppourtunities").style.color = "black";
-				document.getElementById("contentIFrameURL").src = "comingsoon.html";
+				document.getElementById("contentIFrameURL").src = "https://dashboard.onguard.convergeone.com/s/csc-reporting/app/dashboards#/view/fcab4af0-f6b1-11ea-abc0-c9004f495d28?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-90d%2Cto%3Anow))&_a=(description:%27%27,filters:!((%27$state%27:(store:appState),query:(match_phrase:(companycode:"+customerCode+")))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:%27%27),timeRestore:!t,title:%27SWB%20-%20Customer%20Alarms%20and%20Customer%27,viewMode:view)";
 			}
 			function chanagetooppourtunitiesifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
 				document.getElementById("projects").style.color = "black";
 				document.getElementById("tickets").style.color = "black";
 				document.getElementById("oppourtunities").style.color = "blue";
 				document.getElementById("contentIFrameURL").src = "comingsoon.html";
 			}
-			// function showdashboardifarme() {
-			// 	document.getElementById("customerCodeDiv").style.display = "block";
-			// 	document.getElementById("test").style.display = "block";
-			// 	document.getElementById("contentIFrameURL").src = "comingsoon.html" + customerCode;
-			// }
 	</script>
 	<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'>
 	</script>			
