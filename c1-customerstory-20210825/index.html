@@ -20,7 +20,7 @@
 		<div id="div1">
 			<div class="bg" id="first">						
 				<div class="col-12 col-md-12 col-lg-12 col-xl-12 mx-auto searh-page">
-					<nav class="navbar navbar-expand-lg navbar-light p-0 m-0" id="home-btn">					
+					<nav class="navbar navbar-expand-lg navbar-light p-0 m-0">					
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 						</button>				  
@@ -78,29 +78,21 @@
 							<li class="nav-item mr-2">								
 								<button class="btn btn-custom btn-sm my-2 my-sm-0" id="closeContentIFrameButton">HOME</button>
 							</li>
-							<!-- <li class="nav-item mr-2">
-								<button class="btn btn-custom btn-sm my-2 my-sm-0" id="test1">DASHBOARD</button>
-							</li> -->
 							<li class="nav-item mr-2">
-								<button id="projects" class="btn btn-custom btn-sm my-2 my-sm-0">PROJECTS</button>
+								<a href="https://delbertaud.github.io/c1-customerstory/page1.html" target="converse" class="btn btn-custom btn-sm my-2 my-sm-0">PROJECTS</a>
 							</li>
 							<li class="nav-item mr-2">
-								<button id="tickets" class="btn btn-custom btn-sm my-2 my-sm-0">TICKETS</button>
+								<a href="https://delbertaud.github.io/c1-customerstory/page2.html" target="converse" class="btn btn-custom btn-sm my-2 my-sm-0">TICKETS</a>
 							</li>
-							<li class="nav-item">
-								<button id="oppourtunities" class="btn btn-custom btn-sm my-2 my-sm-0">OPPORTUNITIES</button>
+							<li class="nav-item">	
+								<a href="https://delbertaud.github.io/c1-customerstory/page3.html" target="converse" class="btn btn-custom btn-sm my-2 my-sm-0">OPPORTUNITIES</a>
 							</li>  							
 						</ul>						
 					</div>
 				</nav>	
 				<hr class="mt-1 mb-1">
-					<div id="test">
-						<div id="customerCodeDiv"></div>
-						<iframe id="contentIFrameURL" src='' class="m-90" width="100%"></iframe>
-					</div>
-				<!-- <div id="newiframe">
-					<iframe src="https://delbertaud.github.io/c1-customerstory/page1.html" name="converse" scrolling="No" height="940px" width="100%" style="border: none;"></iframe>
-				</div> -->
+				<div id="customerCodeDiv"></div>
+				<iframe id="contentIFrameURL" src='' class="m-90" width="100%"></iframe>
 			</div>
 		</div>			
 	</div>	
@@ -110,15 +102,16 @@
 		document.getElementById("showAboutButton").addEventListener("click", showAboutDiv)
 		document.getElementById("closeAboutButton").addEventListener("click", closeAboutDiv)
 		document.getElementById("closeContentIFrameButton").addEventListener("click", closeContentIFrameDiv)
-		document.getElementById("projects").addEventListener("click", chanagetoprojectsifarme)
-		document.getElementById("tickets").addEventListener("click", chanagetoticetsifarme)
-		document.getElementById("oppourtunities").addEventListener("click", chanagetooppourtunitiesifarme)		
-		//document.getElementById("test1").addEventListener("click", showdashboardifarme)
 		findCompanies();
 		function findCompanies() {
 			document.getElementById("submitButton").disabled = true;
 			searchForValue = document.getElementById("searchForTextbox").value.toLowerCase();
-			url = "https://c1apitest.delbertaud.com/" + searchForValue;
+			queryString = window.location.search;
+			if (queryString.includes("c1")) {
+				url = "https://customerstory.onguard.convergeone.com/csapi/" + searchForValue;
+			} else {
+				url = "https://c1apitest.delbertaud.com/" + searchForValue;
+			}
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.onreadystatechange = function() { 
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -165,43 +158,22 @@
 			function showAboutDiv() {
 				document.getElementById("searchDiv").style.display = "none";
 				document.getElementById("aboutDiv").style.display = "block";
-				document.getElementById("home-btn").style.display = "none";
 			}
 			function closeAboutDiv() {
 				document.getElementById("aboutDiv").style.display = "none";
 				document.getElementById("searchDiv").style.display = "block";				
-				document.getElementById("home-btn").style.display = "block";				
 			}
 			function showContentIFrameDiv() {
 				document.getElementById("div1").style.display = "none";
 				document.getElementById("contentIframeDiv").style.display = "block";
 				customerCode = document.getElementById("companyList").selectedOptions[0].innerText.split(":")[1]
-				//document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here.";
-				chanagetoprojectsifarme()
-				//document.getElementById("contentIFrameURL").src = "comingsoon.html" + customerCode;
+				document.getElementById("customerCodeDiv").innerHTML = customerCode + " dashboard to be shown here.";
+				document.getElementById("contentIFrameURL").src = "https://c1apitest.delbertaud.com/" + customerCode;
 			}
 			function closeContentIFrameDiv() {
 				document.getElementById("contentIframeDiv").style.display = "none";
 				document.getElementById("div1").style.display = "block";
-				
-			}
-			function chanagetoprojectsifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
-				document.getElementById("contentIFrameURL").src = "comingsoon.html";
-			}
-			function chanagetoticetsifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
-				document.getElementById("contentIFrameURL").src = "comingsoon.html";
-			}
-			function chanagetooppourtunitiesifarme() {
-				//document.getElementById("customerCodeDiv").style.display = "none";
-				document.getElementById("contentIFrameURL").src = "comingsoon.html";
-			}
-			// function showdashboardifarme() {
-			// 	document.getElementById("customerCodeDiv").style.display = "block";
-			// 	document.getElementById("test").style.display = "block";
-			// 	document.getElementById("contentIFrameURL").src = "comingsoon.html" + customerCode;
-			// }
+			}			
 	</script>
 	<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'>
 	</script>			

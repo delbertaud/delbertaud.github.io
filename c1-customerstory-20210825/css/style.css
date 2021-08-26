@@ -35,7 +35,7 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-co
 .card-body{box-shadow:0px 8px 16px rgb(0 0 0 / 11%)}
 .btn-custom {color: #000;background-color: #bed1e0;border-color: #bed1e0;cursor:default;}
 .btn-abt {color: #fff;background-color: transparent;border-color: #bed1e0;cursor:default;}
-.btn-home {color: #fff;background-color: transparent;border-color: #bed1e0;cursor:default;position: absolute;top: 0px;}
+.btn-home {color: #fff;background-color: transparent;border-color: #bed1e0;cursor:default;position: absolute;top: 0px;left: 80px;}
 .btn-blue {color: #fff;background-color: #01abef;border-color: #01abef;}
 .btn-blue:hover {color: #01abef;background-color: #fff;border-color: #01abef;}
 .content-wrapper {overflow-x: hidden;background: #f2f2f2;}
