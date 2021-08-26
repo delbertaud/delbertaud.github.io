@@ -1,6 +1,6 @@
 .bg{background-image:url(../assets/bg.jpg);max-height: 100%;min-height: 100vh;color:#fff;font-family: 'Oswald', sans-serif;background-size: cover;background-position: bottom center;}
 .about-bg{background-image:url(../assets/about-bg.jpg);max-height: 100%;min-height: 100vh;color:#fff;font-family: 'Oswald', sans-serif;background-size: cover;background-position: bottom center;}
-.s-blue {color: #00aeed;}
+.s-blue {color: #00aeed;} 
 .pt-7{padding-top: 5rem!important;}
 .heading{font-size: 40px;font-weight: 300;text-transform:uppercase;}
 /* page structure */
