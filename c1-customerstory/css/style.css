@@ -63,3 +63,4 @@ option{background:#ebebeb;}
 input:focus{outline:none;}
 select:focus{outline:none;}
 .m-90{min-height:88vh;}
+#companyList{visibility:hidden;}
