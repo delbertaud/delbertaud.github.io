@@ -221,6 +221,9 @@
 			chanagetoprojectsifarme();
 		}
 		function closeContentIFrameDiv() {
+			document.getElementById("companyList").innerHTML = "";
+			companyList.style.visibility = "hidden";
+			document.getElementById("searchForTextbox").value = "";
 			document.getElementById("contentIframeDiv").style.display = "none";
 			document.getElementById("div1").style.display = "block";
 		}
