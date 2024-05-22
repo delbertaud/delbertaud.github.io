@@ -43,36 +43,36 @@ color: Navy;
 
 }
 .LinkedInAreaStyle a:link {
-  color: yellow;
+  color: white;
 }
 .LinkedInAreaStyle a:visited {
-  color: yellow;
+  color: white;
 }
 .LinkedInAreaStyle a:hover {
-  color: yellow;
+  color: white;
 }
 .LinkedInAreaStyle a:active {
-  color: yellow;
+  color: white;
 }
 
 .JobWantedAreaStyle {
-  background-color: Navy;
-  color: white;
-  font-size: 16px;
-  outline: 1px solid black;
+  background-color: red;
+  color: yellow;
+  font-size: 24px;
+  outline: 2px solid yellow;
   text-align: center;
 }
 .JobWantedAreaStyle a:link {
-  color: white;
+  color: yellow;
 }
 .JobWantedAreaStyle a:visited {
-  color: white;
+  color: yellow;
 }
 .JobWantedAreaStyle a:hover {
-  color: white;
+  color: yellow;
 }
 .JobWantedAreaStyle a:active {
-  color: white;
+  color: yellow;
 }
 
 .OfferingStyleTr {
