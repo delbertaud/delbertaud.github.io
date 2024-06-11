@@ -55,6 +55,19 @@ color: Navy;
   color: white;
 }
 
+.OfferingBody a:link {
+  color: red;
+}
+.OfferingBody a:visited {
+  color: red;
+}
+.OfferingBody a:hover {
+  color: red;
+}
+.OfferingBody a:active {
+  color: red;
+}
+
 .JobWantedAreaStyle {
   background-color: red;
   color: yellow;
