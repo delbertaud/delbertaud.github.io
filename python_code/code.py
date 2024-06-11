@@ -1,4 +1,3 @@
-# type: ignore
 import openpyxl as xl
 from faker import Faker
 
