@@ -1,0 +1,245 @@
+body {
+  background-color: Navy;
+  font-family: "Times New Roman", Times, serif;
+  color: Navy;
+}
+
+.SeparatorStyle {
+background-color: #7DF9FF;
+height: 3px;
+}
+
+.TitleBannerStyle {
+  background-color: #7DF9FF;
+  text-align: center;
+}
+.TitleBannerStyle a:link {
+    color: Navy;
+}
+.TitleBannerStyle a:visited {
+color: Navy;
+}
+.TitleBannerStyle a:hover {
+color: Navy;
+}
+.TitleBannerStyle a:active {
+color: Navy;
+}
+
+.BodyAreaStyle {
+  background-color: white;
+  font-size: 14px;
+}
+.BodyAreaMargin {
+    margin: 20px;
+}
+
+.LinkedInAreaStyle {
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  outline: 1px solid black;
+  text-align: center;
+
+}
+.LinkedInAreaStyle a:link {
+  color: white;
+}
+.LinkedInAreaStyle a:visited {
+  color: white;
+}
+.LinkedInAreaStyle a:hover {
+  color: white;
+}
+.LinkedInAreaStyle a:active {
+  color: white;
+}
+
+.OfferingBody a:link {
+  color: red;
+}
+.OfferingBody a:visited {
+  color: red;
+}
+.OfferingBody a:hover {
+  color: red;
+}
+.OfferingBody a:active {
+  color: red;
+}
+
+.JobWantedAreaStyle {
+  background-color: red;
+  color: yellow;
+  font-size: 24px;
+  outline: 2px solid yellow;
+  text-align: center;
+}
+.JobWantedAreaStyle a:link {
+  color: yellow;
+}
+.JobWantedAreaStyle a:visited {
+  color: yellow;
+}
+.JobWantedAreaStyle a:hover {
+  color: yellow;
+}
+.JobWantedAreaStyle a:active {
+  color: yellow;
+}
+
+.OfferingStyleTr {
+  vertical-align: top;
+}
+.OfferingStyleTd {
+  outline: 1px solid black;
+  padding: 5px;
+}
+.OfferingStyleTitle {
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.OfferingBody {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.ResumeArea {
+  color: black;
+  font-size: 12px;
+}
+.ResumeAreaTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+.ResumeAreaHighlite {
+  font-weight: bold;
+}
+.ResumeAreaTable {
+  color: black;
+  font-size: 12px;
+}
+.ResumeAreaTableTdTitle {
+  font-weight: bold;
+  width: 200px;
+  vertical-align: top;
+}
+
+.ResumeAreaJobTitle {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.DetailedWorkHistoryArea {
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+.DetailedWorkHistoryArea a:link {
+    color: white;
+}
+.DetailedWorkHistoryArea a:visited {
+    color: white;
+}
+.DetailedWorkHistoryArea a:hover {
+    color: white;
+}
+.DetailedWorkHistoryArea a:active {
+    color: white;
+}
+
+.JobTitle {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.TopBottomPadding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.NoMarginPadding {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Outline {
+width: 750px;
+padding: 10px;
+outline: 1px solid black;
+}
+
+.Bold {
+font-weight: bold;
+}
+.Underline {
+text-decoration: underline;
+}
+.Center {
+text-align: center;
+}
+.Font20 {
+  font-size: 20px;
+}
+.Font18 {
+font-size: 18px;
+}
+.Font16 {
+font-size: 16px;
+}
+.Font14 {
+font-size: 14px;
+}
+.Font12 {
+font-size: 12px;
+}
+.Font10 {
+font-size: 10px;
+}
+.tdhead {
+font-weight: bold;
+text-align: center;
+column-span: all;
+}
+.tdtitle {
+font-weight: bold;
+width: 150px;
+vertical-align: top;
+}
+
+.RedBackground {
+background-color: red;
+}
+.CornFlowerBlueBackground {
+background-color: cornflowerblue;
+}
+.MistyRoseBackground {
+background-color: MistyRose;
+}
+.LightRedBackground {
+background-color: LightCoral;
+}
+.FloralWhiteBackground {
+background-color: FloralWhite;
+}
+.FloralWhiteText {
+color: floralwhite
+}
+.NavyText {
+color: navy;
+}
+.RedText {
+color: red;
+}
+.WhiteText {
+color: white;
+}
+.BlackText {
+color: black;
+}
