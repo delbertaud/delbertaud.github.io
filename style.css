@@ -184,6 +184,9 @@ text-decoration: underline;
 .Center {
 text-align: center;
 }
+.Middle {
+vertical-align: middle;
+}
 .Font20 {
   font-size: 20px;
 }
@@ -242,4 +245,7 @@ color: white;
 }
 .BlackText {
 color: black;
+}
+.Padding30 {
+padding: 30px;
 }
