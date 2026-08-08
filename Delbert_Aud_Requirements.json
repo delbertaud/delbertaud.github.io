@@ -1,0 +1,34 @@
+{
+  "candidate": {
+    "name": "Delbert Aud",
+    "title": "Senior IT Professional & Consultant",
+    "location": "Henderson, NV",
+    "citizenship": "United States Citizen",
+    "email": "delbert.aud@gmail.com",
+    "phone": "702-449-2337",
+    "certifications": []
+  },
+  "engagementRequirements": {
+    "workLocation": "100% Remote Only",
+    "fullTimeW2": {
+      "salaryUSD": 120000,
+      "format": "Full-Time W2 Basis"
+    },
+    "contractRate": {
+      "hourlyUSD": 65.00,
+      "format": "Contract Basis ($65/hr)"
+    },
+    "preferredRoles": [
+      "AI & Automation Consultant",
+      "Lead RPA Developer",
+      "Senior Software Architect",
+      "Systems & Data Engineer"
+    ]
+  },
+  "coreServices": [
+    "AI & LLM Workflow Automation",
+    "Robotic Process Automation (RPA)",
+    "Custom Software & Systems Programming",
+    "Enterprise Data Engineering & Cloud Architecture"
+  ]
+}
