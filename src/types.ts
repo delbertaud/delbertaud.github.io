@@ -90,6 +90,6 @@ export interface ConsultationForm {
   email: string;
   company: string;
   serviceType: string;
-  engagementType: 'Contract ($65/hr)' | 'Full-Time W2' | 'Advisory Consultation' | 'Project Based';
+  engagementType: 'Contract ($75/hr)' | 'Full-Time W2' | 'Advisory Consultation' | 'Project Based';
   projectDetails: string;
 }

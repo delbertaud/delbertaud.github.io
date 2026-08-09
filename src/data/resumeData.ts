@@ -3,7 +3,7 @@ import { ResumeData } from '../types';
 export const RESUME_DATA: ResumeData = {
   candidate: {
     name: 'Delbert Aud',
-    title: 'Senior IT Professional & Consultant',
+    title: 'AI Systems Engineer & Automation Architect (RAG, LLM, Python, Gemini API)',
     location: 'Henderson, NV (US Citizen)',
     citizenship: 'United States Citizen',
     email: 'delbert.aud@gmail.com',
@@ -18,8 +18,8 @@ export const RESUME_DATA: ResumeData = {
   requirements: {
     workLocation: '100% Remote Only',
     citizenshipStatus: 'United States Citizen (Henderson, NV)',
-    fullTimeW2Salary: '$120,000 / year',
-    contractRate: '$65.00 / hour',
+    fullTimeW2Salary: '$120,000 / year on W2 with Health Insurance Benefits',
+    contractRate: '$75.00 / hour',
     targetRoles: [
       'AI & Automation Consultant',
       'Lead RPA Developer',

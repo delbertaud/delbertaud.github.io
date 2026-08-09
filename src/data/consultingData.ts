@@ -167,7 +167,7 @@ export const CONSULTING_FAQ = [
   {
     question: 'What types of consulting engagements does Delbert Aud accept?',
     answer:
-      'Delbert accepts 100% remote positions on a Full-Time W2 basis ($120,000/year) or Contract/Advisory basis ($65/hour). Engagements include AI strategy, RPA development, custom software engineering, and enterprise architecture auditing.',
+      'Delbert accepts 100% remote positions on a Full-Time W2 basis ($120,000/year on W2 with Health Insurance Benefits) or Contract/Advisory basis ($75/hour). Engagements include AI strategy, RPA development, custom software engineering, and enterprise architecture auditing.',
   },
   {
     question: 'How do you handle sensitive enterprise data with AI models?',

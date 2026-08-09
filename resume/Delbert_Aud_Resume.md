@@ -1,5 +1,5 @@
 # DELBERT AUD
-**Senior IT Professional & Consultant**  
+**AI Systems Engineer & Automation Architect (RAG, LLM, Python, Gemini API)**  
 *Automation • Software Engineering • AI/ML • Cloud Architecture*
 
 📍 Henderson, NV (US Citizen) | ✉️ delbert.aud@gmail.com | 📞 (702) 449-2337  
@@ -14,8 +14,8 @@ Accomplished IT professional and solutions architect with over four decades of h
 ## WORK ENGAGEMENT REQUIREMENTS
 - **Work Model:** 100% Remote Only
 - **Citizenship & Location:** United States Citizen, residing in Henderson, NV
-- **Full-Time W2 Basis:** $120,000 / year
-- **Contract Basis:** $65.00 / hour
+- **Full-Time W2 Basis:** $120,000 / year on W2 with Health Insurance Benefits
+- **Contract Basis:** $75.00 / hour
 - **Target Roles:** Automation Consultant, AI Integration Architect, Lead RPA Developer, Senior Software Systems Engineer
 
 ---

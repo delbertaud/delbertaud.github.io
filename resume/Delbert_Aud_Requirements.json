@@ -1,7 +1,7 @@
 {
   "candidate": {
     "name": "Delbert Aud",
-    "title": "Senior IT Professional & Consultant",
+    "title": "AI Systems Engineer & Automation Architect (RAG, LLM, Python, Gemini API)",
     "location": "Henderson, NV",
     "citizenship": "United States Citizen",
     "email": "delbert.aud@gmail.com",
@@ -12,11 +12,11 @@
     "workLocation": "100% Remote Only",
     "fullTimeW2": {
       "salaryUSD": 120000,
-      "format": "Full-Time W2 Basis"
+      "format": "Full-Time W2 Basis ($120,000/yr on W2 with Health Insurance Benefits)"
     },
     "contractRate": {
-      "hourlyUSD": 65.00,
-      "format": "Contract Basis ($65/hr)"
+      "hourlyUSD": 75.00,
+      "format": "Contract Basis ($75/hr)"
     },
     "preferredRoles": [
       "AI & Automation Consultant",

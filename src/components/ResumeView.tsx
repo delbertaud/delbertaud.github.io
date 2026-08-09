@@ -109,14 +109,14 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
             {/* Requirement 2 */}
             <div className="p-4 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-1 print:bg-white print:border-gray-300">
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Full-Time W2 Basis</span>
-              <div className="text-lg font-black text-emerald-400 print:text-black">$120,000 / Year</div>
+              <div className="text-sm sm:text-base font-black text-emerald-400 print:text-black">$120,000 / Year on W2 with Health Insurance Benefits</div>
               <span className="text-xs text-slate-400 block">Annual salary target</span>
             </div>
 
             {/* Requirement 3 */}
             <div className="p-4 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-1 print:bg-white print:border-gray-300">
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Contract Rate</span>
-              <div className="text-lg font-black text-cyan-400 print:text-black">$65.00 / Hour</div>
+              <div className="text-lg font-black text-cyan-400 print:text-black">$75.00 / Hour</div>
               <span className="text-xs text-slate-400 block">Contract / advisory rate</span>
             </div>
 

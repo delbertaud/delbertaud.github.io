@@ -89,18 +89,18 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             {/* Quick Requirements Bar */}
             <div className="pt-4 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <DollarSign className="w-4 h-4 text-emerald-400" />
+                <DollarSign className="w-4 h-4 text-emerald-400 shrink-0" />
                 <div>
                   <span className="block font-semibold text-slate-200">Full-Time W2</span>
-                  <span>$120,000 / Year</span>
+                  <span>$120,000 / Year on W2 with Health Insurance Benefits</span>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-cyan-400" />
+                <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
                 <div>
                   <span className="block font-semibold text-slate-200">Contract Rate</span>
-                  <span>$65.00 / Hour</span>
+                  <span>$75.00 / Hour</span>
                 </div>
               </div>
 
