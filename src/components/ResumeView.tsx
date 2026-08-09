@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   FileText,
   Download,
-  Printer,
   ShieldCheck,
   MapPin,
   Mail,
@@ -16,7 +15,6 @@ import {
   Award,
   ChevronDown,
   ChevronUp,
-  FileCode,
   Sparkles,
 } from 'lucide-react';
 import { RESUME_DATA } from '../data/resumeData';
@@ -28,10 +26,6 @@ interface ResumeViewProps {
 export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [expandedRole, setExpandedRole] = useState<number | null>(0);
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   const categories = ['All', ...RESUME_DATA.skillCategories.map((c) => c.category)];
 
@@ -51,7 +45,7 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-xl font-bold text-white">Delbert Aud — Resume & Requirements</h1>
+                <h1 className="text-xl font-bold text-white">Delbert Aud — Resume</h1>
                 <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300">
                   /resume
                 </span>
@@ -62,34 +56,24 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
             <a
-              href="/api/resume/markdown"
-              target="_blank"
-              rel="noreferrer"
-              className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-950 text-cyan-300 border border-slate-800 hover:bg-slate-800 transition-all flex items-center gap-1.5"
+              href="/Delbert_Aud_resume.docx"
+              download="Delbert_Aud_resume.docx"
+              className="px-4 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20"
             >
-              <FileCode className="w-4 h-4 text-cyan-400" />
-              <span>Download Markdown (.md)</span>
+              <Download className="w-4 h-4 text-slate-950" />
+              <span>Download Resume</span>
             </a>
 
             <a
-              href="/api/resume/requirements"
-              target="_blank"
-              rel="noreferrer"
-              className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-950 text-emerald-300 border border-slate-800 hover:bg-slate-800 transition-all flex items-center gap-1.5"
+              href="/Delbert_Aud_Work_History.docx"
+              download="Delbert_Aud_Work_History.docx"
+              className="px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-950 text-cyan-300 border border-cyan-500/30 hover:bg-slate-800 transition-all flex items-center gap-2 shadow-md"
             >
-              <Download className="w-4 h-4 text-emerald-400" />
-              <span>Requirements (.json)</span>
+              <Download className="w-4 h-4 text-cyan-400" />
+              <span>Download Work History</span>
             </a>
-
-            <button
-              onClick={handlePrint}
-              className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all flex items-center gap-1.5 font-bold shadow-md shadow-cyan-500/20"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Print / Save PDF</span>
-            </button>
           </div>
         </div>
 
@@ -278,7 +262,7 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3 print:border-gray-300">
                   <div>
                     <h3 className="text-lg font-bold text-white print:text-black">{exp.role}</h3>
-                    <p className="text-xs text-cyan-300 font-semibold print:text-gray-700">{exp.company} — {exp.location}</p>
+                    <p className="text-xs text-cyan-300 font-semibold print:text-gray-700">{exp.company ? `${exp.company} — ` : ''}{exp.location}</p>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 print:bg-gray-200 print:text-black self-start sm:self-auto">
                     {exp.period}

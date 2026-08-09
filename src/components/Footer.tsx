@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, FileText, FileCode, Download, Mail, Phone, MapPin, Sparkles } from 'lucide-react';
+import { ShieldCheck, FileText, Download, Mail, Phone, MapPin, Sparkles } from 'lucide-react';
 
 interface FooterProps {
   setActiveTab: (tab: string) => void;
@@ -62,29 +62,27 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Files & Resume Assets</h4>
             <div className="space-y-2">
               <a
-                href="/api/resume/markdown"
-                target="_blank"
-                rel="noreferrer"
+                href="/Delbert_Aud_resume.docx"
+                download="Delbert_Aud_resume.docx"
                 className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
               >
                 <div className="flex items-center gap-2">
-                  <FileCode className="w-4 h-4 text-cyan-400" />
-                  <span>Delbert_Aud_Resume.md</span>
+                  <Download className="w-4 h-4 text-cyan-400" />
+                  <span>Delbert_Aud_resume.docx</span>
                 </div>
-                <span className="text-[10px] font-mono text-cyan-400 font-bold">Markdown</span>
+                <span className="text-[10px] font-mono text-cyan-400 font-bold">Resume</span>
               </a>
 
               <a
-                href="/api/resume/requirements"
-                target="_blank"
-                rel="noreferrer"
+                href="/Delbert_Aud_Work_History.docx"
+                download="Delbert_Aud_Work_History.docx"
                 className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
               >
                 <div className="flex items-center gap-2">
-                  <Download className="w-4 h-4 text-emerald-400" />
-                  <span>Delbert_Aud_Requirements.json</span>
+                  <Download className="w-4 h-4 text-cyan-400" />
+                  <span>Delbert_Aud_Work_History.docx</span>
                 </div>
-                <span className="text-[10px] font-mono text-emerald-400 font-bold">JSON</span>
+                <span className="text-[10px] font-mono text-cyan-400 font-bold">Work History</span>
               </a>
             </div>
           </div>

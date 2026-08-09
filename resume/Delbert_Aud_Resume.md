@@ -20,26 +20,17 @@ Accomplished IT professional and solutions architect with over four decades of h
 
 ---
 
-## CORE TECHNICAL EXPERTISE
+## TECHNICAL SKILL MATRIX
 
-### AI & Machine Learning
-- **LLM Pipelines & Workflows:** n8n, Ollama, Google Gemini API, OpenAI, LangChain, Local LLMs, RAG Architectures.
-- **AI Image Generation:** Automatic1111, Stable Diffusion, ComfyUI for business imagery.
-- **Workflow Automation:** AirTable, Zapier, Slack, Make, Custom Webhooks.
-
-### Robotic Process Automation (RPA)
-- **RPA Platforms:** Automation Anywhere, Apache NiFi, JitBit Macro Recorder.
-- **Automation Languages:** Python, Go, PowerShell, Shell Scripting, AutoIt.
-
-### Software Development & Systems Programming
-- **Programming Languages:** Python, C++, C, Java, C#, Go, JavaScript / TypeScript, Visual Basic, SQL, Bash.
-- **Databases:** Oracle, MySQL, Microsoft SQL Server, PostgreSQL, MongoDB, Redis, Elasticsearch, SQLite.
-- **Telecom & Systems:** Avaya IXM Software Deployments, Enterprise Alarm Management.
-
-### Cloud, Security & Infrastructure
-- **Specialization:** Enterprise Cybersecurity & Cloud Architecture.
-- **Cloud Platforms:** AWS, Google Cloud Compute, DigitalOcean.
-- **Virtualization & Containers:** VMware ESXi, Docker, Linux / Windows Server Administration.
+- **Operating Systems:** Linux, Windows, MacOS
+- **Cloud Computing:** Amazon Web Services (AWS), Google Cloud Compute (GCP), DigitalOcean
+- **Programming Languages:** Python, C, C++, Java, C#, JavaScript, Visual Basic, SQL, Go, PHP
+- **Databases:** Oracle, MySQL, SQL Server, PostgreSQL, MongoDB, Redis, SQLite, Elasticsearch
+- **Virtualization & Containerization:** VMWare ESXi, Microsoft Hyper-V, Docker, Proxmox
+- **Automation:** Robotic Process Automation (RPA), Selenium, Node-RED, Apache NiFi, n8n
+- **AI/ML & Data Science:** Gemini API, n8n, LangChain, CrewAI
+- **Project Management:** Agile, Scrum, Kanban
+- **Security & Compliance:** DITSCAP, DODAF, DIACAP
 
 ---
 
@@ -65,15 +56,19 @@ Accomplished IT professional and solutions architect with over four decades of h
 
 ## PROFESSIONAL EXPERIENCE & CONSULTING
 
-### Senior Technology Consultant & Solutions Architect
-*Independent / Contract Consulting* | Henderson, NV
-- Advised clients on AI/ML integration strategies, local LLM deployments, and custom process automation workflows.
-- Architected cloud migration strategies and security hardening protocols following enterprise security guidelines.
+### Senior Automation Architect
+*Henderson, NV* | June 2016 - May 2024
+- **Architected Enterprise RPA & Process Automation Frameworks:** Designed scalable end-to-end automation strategies leveraging Python, Golang, Automation Anywhere, and PowerShell—advising cross-functional teams and optimizing code performance by up to 500% to dramatically streamline operational workflows.
+- **Engineered Data Pipelines & Analytics Engine for Triage Automation:** Built high-throughput ETL data pipelines from SQL Server into Elasticsearch and authored Python-driven intelligent routing algorithms (Ivanti, enterprise alarm noise analysis) to automate help desk ticket assignment and proactive infrastructure remediation.
+- **Designed Telephony Automation & Validation Systems:** Developed Java-based automated testing architectures utilizing the Avaya DMCC library alongside RESTful monitoring systems on Linux/CentOS to validate complex voice infrastructure changes, enforce functional baseline stability, and guarantee system reliability.
+- **Built Automated Deployment & Compliance Solutions:** Spearheaded Robotic Process Automation (RPA) and server configuration scripts (JitBit, PowerShell) for automated software installations (Avaya IXM), while authoring custom utility wrappers to automate long-term security retention and satisfy strict audit compliance standards.
 
-### Lead Technology Specialist & Manager
-*HP Enterprise Services / EDS / Enterprise Accounts (e.g. Bank of America)*
-- Led multi-disciplinary development and systems engineering teams managing mission-critical enterprise systems.
-- Managed software lifecycle delivery, vendor coordination, and infrastructure reliability for major financial institution accounts.
+### Technology Consultant
+*HP Enterprise Services / EDS / Enterprise Accounts (e.g. Bank of America)* | September 1995 - June 2016
+- **Strategic Enterprise Architecture & Compliance:** Partnered with government and enterprise stakeholders to architect secure IT solutions, ensuring full alignment with DISA STIG standards and complex government security postures.
+- **Legacy Modernization & Technical Migration:** Advised senior leadership and cross-functional engineering teams on migrating complex legacy systems, developing comprehensive framework guides, custom discovery tools, and sandbox testing protocols to ensure zero-downtime application relocations.
+- **Process Automation & Performance Optimization:** Re-engineered legacy OBIEE reporting processes using automated scripting, slashing report rendering times from 25 minutes to 2 seconds and reducing enterprise storage requirements by 75%.
+- **Cross-Functional Leadership & Solution Engineering:** Led technical delivery teams in designing and deploying full-stack, automated enterprise tools using C#, PowerShell, Visual Basic, and SQL Server, bridging business requirements with technical execution across 30+ concurrent projects.
 
 ---
 

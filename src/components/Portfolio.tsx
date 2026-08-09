@@ -80,9 +80,11 @@ export const Portfolio: React.FC<PortfolioProps> = ({ setActiveTab }) => {
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300">
                       {study.title}
                     </h3>
-                    <p className="text-xs text-slate-400 font-medium mt-1">
-                      Client: {study.clientContext}
-                    </p>
+                    {study.clientContext && (
+                      <p className="text-xs text-slate-400 font-medium mt-1">
+                        Client: {study.clientContext}
+                      </p>
+                    )}
                   </div>
 
                   <p className="text-slate-300 text-xs leading-relaxed line-clamp-3">
@@ -123,9 +125,11 @@ export const Portfolio: React.FC<PortfolioProps> = ({ setActiveTab }) => {
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
                   {activeCase.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 font-medium mt-1">
-                  Context: {activeCase.clientContext}
-                </p>
+                {activeCase.clientContext && (
+                  <p className="text-xs sm:text-sm text-slate-400 font-medium mt-1">
+                    Context: {activeCase.clientContext}
+                  </p>
+                )}
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-950 border border-emerald-500/30 text-right shrink-0">
