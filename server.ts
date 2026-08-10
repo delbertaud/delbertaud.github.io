@@ -108,10 +108,19 @@ Provide a highly professional, structured, step-by-step engineering proposal and
   });
 
   // API Endpoints for Resume & Work History DOCX files
-  app.get('/Delbert_Aud_resume.docx', (req, res) => {
-    const filePath = path.join(process.cwd(), 'resume', 'Delbert_Aud_resume.docx');
+  app.get('/Delbert_Aud_Resume.docx', (req, res) => {
+    const filePath = path.join(process.cwd(), 'resume', 'Delbert_Aud_Resume.docx');
     if (fs.existsSync(filePath)) {
-      res.download(filePath, 'Delbert_Aud_resume.docx');
+      res.download(filePath, 'Delbert_Aud_Resume.docx');
+    } else {
+      res.status(404).send('Resume file not found');
+    }
+  });
+
+  app.get('/Delbert_Aud_resume.docx', (req, res) => {
+    const filePath = path.join(process.cwd(), 'resume', 'Delbert_Aud_Resume.docx');
+    if (fs.existsSync(filePath)) {
+      res.download(filePath, 'Delbert_Aud_Resume.docx');
     } else {
       res.status(404).send('Resume file not found');
     }

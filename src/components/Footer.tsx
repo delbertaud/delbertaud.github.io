@@ -62,13 +62,13 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Files & Resume Assets</h4>
             <div className="space-y-2">
               <a
-                href="/Delbert_Aud_resume.docx"
-                download="Delbert_Aud_resume.docx"
+                href="/Delbert_Aud_Resume.docx"
+                download="Delbert_Aud_Resume.docx"
                 className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
               >
                 <div className="flex items-center gap-2">
                   <Download className="w-4 h-4 text-cyan-400" />
-                  <span>Delbert_Aud_resume.docx</span>
+                  <span>Delbert_Aud_Resume.docx</span>
                 </div>
                 <span className="text-[10px] font-mono text-cyan-400 font-bold">Resume</span>
               </a>

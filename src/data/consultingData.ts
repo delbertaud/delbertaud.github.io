@@ -15,12 +15,12 @@ export const IMAGES = {
 export const SERVICE_PILLARS: ServicePillar[] = [
   {
     id: 'ai-consulting',
-    title: 'AI & Machine Learning Consulting',
-    subtitle: 'Automated LLM Workflows, Local AI & Intelligent Data Extraction',
+    title: 'Enterprise AI Strategy, Custom RAG & Gemini API Deployment',
+    subtitle: 'Multimodal AI Agents, Long-Context Reasoning & Gemini API Workflows',
     iconName: 'Bot',
     badge: 'Popular',
     description:
-      'Transform complex operational data into actionable intelligence with custom LLM pipelines, RAG document search, n8n automation, and local AI (Ollama/Gemini/OpenAI) setups.',
+      'Scale your business with custom multimodal AI agents and automated workflows. Powered by Google’s Gemini API, we implement long-context document reasoning, real-time function calling, and secure local RAG pipelines—delivering grounded insights, structured data extraction, and seamless workflow automation.',
     keyCapabilities: [
       'n8n + Ollama + LLM automated business intelligence pipelines',
       'Retrieval-Augmented Generation (RAG) on private enterprise databases',
@@ -33,11 +33,11 @@ export const SERVICE_PILLARS: ServicePillar[] = [
   },
   {
     id: 'rpa-automation',
-    title: 'Robotic Process Automation (RPA)',
+    title: 'Process Automation & Unattended Workflow Optimization',
     subtitle: 'End-to-End Workflow & Legacy System Automation',
     iconName: 'Cpu',
     description:
-      'Eliminate repetitive manual tasks and human error by deploying high-reliability software bots, macro recorders, and API middleware that bridge legacy desktop apps with modern cloud platforms.',
+      'Reclaim lost employee hours and eliminate manual data entry errors. Using tailored Python desktop bots, PowerShell scripts, and background task schedulers, we create seamless, unattended automated workflows across your legacy applications and cloud systems—delivering 24/7 reliability and reduced operational costs.',
     keyCapabilities: [
       'Automation Anywhere & Apache NiFi process automation',
       'JitBit Macro Recorder & PowerShell automated app deployments',
@@ -50,11 +50,11 @@ export const SERVICE_PILLARS: ServicePillar[] = [
   },
   {
     id: 'software-programming',
-    title: 'Custom Programming & Systems Architecture',
-    subtitle: '40+ Years of High-Performance Code & Polyglot Development',
+    title: 'High-Performance Backend Engineering & Systems Modernization',
+    subtitle: 'Scalable Architecture, Low-Latency Engines & Polyglot Development',
     iconName: 'Code2',
     description:
-      'Robust software engineering across legacy and modern ecosystems. Multi-threaded backends, microservices, database optimizations, and cross-platform enterprise software.',
+      'Supercharge your business infrastructure with scalable, secure backend engineering. From high-concurrency systems in Go, Python, Java, and C/C++ to algorithm optimization, optimized SQL data layers, and legacy modernizations—we architect resilient APIs and low-latency engines that drive operational reliability.',
     keyCapabilities: [
       'Polyglot programming in Python, C++, C, Java, C#, Go, and SQL',
       'High-performance database modeling (PostgreSQL, MS SQL, Oracle, Redis)',

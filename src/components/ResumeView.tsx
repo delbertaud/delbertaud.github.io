@@ -58,8 +58,8 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ setActiveTab }) => {
 
           <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
             <a
-              href="/Delbert_Aud_resume.docx"
-              download="Delbert_Aud_resume.docx"
+              href="/Delbert_Aud_Resume.docx"
+              download="Delbert_Aud_Resume.docx"
               className="px-4 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20"
             >
               <Download className="w-4 h-4 text-slate-950" />

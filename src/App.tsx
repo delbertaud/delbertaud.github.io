@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('services');
-  const [selectedServiceForContact, setSelectedServiceForContact] = useState<string>('AI & Machine Learning Consulting');
+  const [selectedServiceForContact, setSelectedServiceForContact] = useState<string>('Enterprise AI Strategy, Custom RAG & Gemini API Deployment');
 
   // Handle URL hash routing (e.g. /#resume or /#calculator)
   useEffect(() => {
