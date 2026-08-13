@@ -1,600 +1,1312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delbert Aud — AI Systems Engineer &amp; Automation Architect (RAG, LLM, Python, Gemini API)</title>
-  <meta name="description" content="Technical AI Specialist &amp; Automation Architect specializing in local LLM RAG pipelines, Gemini, n8n agentic workflows, legacy code refactoring, and enterprise RPA." />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Delbert Aud",
-    "jobTitle": "AI Systems & Automation Engineer",
-    "url": "https://delbertaud.github.io",
-    "sameAs": ["https://github.com/delbertaud"],
-    "knowsAbout": ["Artificial Intelligence", "Retrieval-Augmented Generation", "LLM Agents", "Python", "RPA"]
-  }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #0f172a;
-      color: #e2e8f0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <title>Delbert Aud | Business Process Automation Architect</title>
+    <meta name="description" content="Executive portfolio of Delbert Aud, Business Process Automation Architect. Specializing in RPA, AI workflow integration, custom web solutions, and IoT hardware automation." />
+    
+    <meta property="og:title" content="Delbert Aud | Business Process Automation Architect" />
+    <meta property="og:description" content="Senior Business Systems Analysis, Robotic Process Automation, AI Integrations, and Custom Engineering." />
+    <meta property="og:url" content="https://delbertaud.com" />
+    <meta property="og:type" content="profile" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Person JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Delbert Aud",
+      "url": "https://delbertaud.com",
+      "jobTitle": "Business Process Automation Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Technical Advisory & Enterprise Systems Architecture"
+      },
+      "email": "delbert.aud@gmail.com",
+      "sameAs": [
+        "https://linkedin.com/in/delbertaud/"
+      ],
+      "knowsAbout": [
+        "Business Process Automation",
+        "AI & Workflow Integration",
+        "Online Solutions Development",
+        "IoT & Custom Hardware",
+        "Robotic Process Automation",
+        "Systems Architecture",
+        "Embedded C & Arduino Control Systems",
+        "Senior Business Systems Analysis",
+        "Technical Copywriting"
+      ]
     }
-    .font-code {
-      font-family: 'Fira Code', monospace;
-    }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(51, 65, 85, 0.6);
-    }
-    .glow-cyan {
-      box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25);
-    }
-  </style>
-</head>
-<body class="bg-[#0f172a] text-slate-200 antialiased selection:bg-cyan-500 selection:text-slate-950 flex flex-col min-h-screen">
-
-  <!-- HEADER NAVIGATION -->
-  <header class="sticky top-0 z-50 flex items-center justify-between px-6 sm:px-12 h-20 border-b border-slate-800/80 bg-[#0f172a]/90 backdrop-blur-md">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/20">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-          <polyline points="16 18 22 12 16 6"></polyline>
-          <polyline points="8 6 2 12 8 18"></polyline>
-        </svg>
-      </div>
-      <div>
-        <a href="/" class="text-xl font-extrabold tracking-tight text-white hover:text-cyan-300 transition-colors block">
-          DELBERT AUD<span class="text-cyan-400">.</span>
-        </a>
-        <span class="text-[11px] font-semibold text-cyan-400 block -mt-0.5">
-          AI Systems Engineer &amp; Automation Architect (RAG, LLM, Python, Gemini API)
-        </span>
-      </div>
-    </div>
-
-    <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider">
-      <a href="#solutions" class="text-slate-300 hover:text-cyan-400 transition-colors">SOLUTIONS</a>
-      <a href="#roi-calculator" class="text-slate-300 hover:text-cyan-400 transition-colors">ROI CALCULATOR</a>
-      <a href="#portfolio" class="text-slate-300 hover:text-cyan-400 transition-colors">PORTFOLIO</a>
-      <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors">CONTACT</a>
-    </nav>
-
-    <div class="flex items-center gap-3">
-      <a href="/resume" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all border border-slate-700 hover:border-cyan-500/50 flex items-center gap-2 shadow-md">
-        <span>VIEW RESUME</span>
-        <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-      </a>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="relative px-6 sm:px-12 pt-12 lg:pt-20 pb-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <!-- Left Content -->
-      <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
-          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-          <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Available for New Engagements</span>
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
-          Intelligent <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-500">Automation</span> & AI.
-        </h1>
-
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-          Architecting high-performance backend infrastructure, deploying production-grade Gemini AI pipelines, and building custom process automations that turn raw data into a competitive advantage. From low-latency C++/SQL refactoring and secure local RAG systems to unattended 24/7 Python automation bots, I engineer resilient, scalable tech stacks that eliminate operational friction and drive measurable business ROI.
-        </p>
-
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm px-8 py-4 rounded-xl transition-all flex items-center gap-2 shadow-xl shadow-cyan-500/20">
-            <span>Get in Touch</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-          </a>
-          <a href="#solutions" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm px-8 py-4 rounded-xl transition-all border border-slate-700 flex items-center gap-2">
-            <span>Explore Services</span>
-          </a>
-        </div>
-
-        <!-- Credentials pill bar -->
-        <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-xs text-slate-400 font-medium">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <strong class="text-slate-200">Enterprise Security & Cloud Architect</strong>
+    </script>
+  </head>
+  <body class="bg-[#0A111E] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen flex flex-col font-sans">
+    
+    <!-- =========================================================================
+         HEADER & TOP NAVIGATION
+         ========================================================================= -->
+    <header class="sticky top-0 z-40 bg-[#080D18]/90 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <!-- Logo / Identity -->
+        <a href="#hero" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-sm bg-[#111C30] border border-white/10 flex items-center justify-center text-[#00C4EE] group-hover:border-[#00C4EE] transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
-            <strong class="text-slate-200">100% Remote (NV / US Citizen)</strong>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Interactive Code Terminal -->
-      <div class="lg:col-span-5 relative">
-        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-xl opacity-25"></div>
-        <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-2xl font-code text-xs">
-          <div class="flex justify-between items-center pb-3 border-b border-slate-800">
-            <div class="flex gap-2">
-              <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
-              <div class="w-3 h-3 rounded-full bg-amber-500/60"></div>
-              <div class="w-3 h-3 rounded-full bg-emerald-500/60"></div>
+          <div>
+            <div class="flex items-baseline space-x-1.5">
+              <span class="font-black text-white tracking-tight text-lg leading-none">
+                DELBERT<span class="text-[#00C4EE]">AUD</span>
+              </span>
+              <span class="text-[10px] font-mono text-[#00C4EE] font-bold uppercase tracking-widest hidden sm:inline">
+                / ARCHITECT
+              </span>
             </div>
-            <div class="text-[10px] font-mono text-slate-400 font-semibold">AI_AGENT_CORE.PY</div>
+            <p class="text-[10px] font-mono text-[#94A3B8] leading-tight">
+              Business Process Automation
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-1 text-xs font-mono font-bold tracking-wider">
+          <a href="#pillars" class="px-3 py-1.5 text-[#94A3B8] hover:text-[#00C4EE] hover:bg-white/5 rounded-sm transition-all">01/PILLARS</a>
+          <a href="#interactive-ide" class="px-3 py-1.5 text-[#94A3B8] hover:text-[#00C4EE] hover:bg-white/5 rounded-sm transition-all">02/LIVE IDE</a>
+          <a href="#case-studies" class="px-3 py-1.5 text-[#94A3B8] hover:text-[#00C4EE] hover:bg-white/5 rounded-sm transition-all">03/CASES</a>
+          <a href="#roi-calculator" class="px-3 py-1.5 text-[#94A3B8] hover:text-[#00C4EE] hover:bg-white/5 rounded-sm transition-all">04/ROI MODEL</a>
+          <a href="#credentials" class="px-3 py-1.5 text-[#94A3B8] hover:text-[#00C4EE] hover:bg-white/5 rounded-sm transition-all">05/CREDENTIALS</a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="hidden md:flex items-center space-x-3">
+          <!-- Split Email Copy Button -->
+          <div class="flex items-center bg-[#111C30] border border-white/10 rounded-sm overflow-hidden text-xs font-mono">
+            <span class="px-2.5 py-1 text-slate-300 select-all border-r border-white/10 hidden xl:inline">
+              delbert.aud@gmail.com
+            </span>
+            <button
+              id="nav-copy-email-btn"
+              data-copy-email="true"
+              class="px-2.5 py-1 text-[#00C4EE] hover:bg-white/10 transition-colors uppercase font-bold flex items-center gap-1"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="copy-text">Copy Email</span>
+            </button>
           </div>
 
-          <div class="space-y-1.5 leading-relaxed overflow-x-auto text-slate-300">
-            <div><span class="text-blue-400">import</span> <span class="text-white">neural_engine</span>, <span class="text-white">rpa_bot</span></div>
-            <div class="text-purple-400 mt-2">class <span class="text-cyan-400 font-bold">ConsultantAgent</span>(AI):</div>
-            <div class="pl-4"><span class="text-blue-400">def</span> <span class="text-cyan-400">optimize_workflow</span>(self, process):</div>
-            <div class="pl-8 text-slate-500"># Initializing cognitive RAG vector search</div>
-            <div class="pl-8 text-emerald-400">self.status = "ANALYZING_BOTTLENECKS"</div>
-            <div class="pl-8 text-slate-300">self.eliminate_manual_keying()</div>
-            <div class="pl-8 text-slate-300">self.deploy_automation_bot()</div>
-            <div id="terminal-logs" class="mt-3 pt-2 border-t border-slate-800/80 space-y-1 text-[11px]">
-              <div class="text-slate-400">[SYSTEM]: Enterprise Encryption Enabled</div>
-              <div class="text-emerald-400">[STATUS]: Efficiency Gain: +88.4%</div>
-              <div class="text-cyan-400 flex items-center gap-1">
-                <span>[AGENT READY]: Awaiting workflow input</span>
-                <span class="animate-pulse font-bold text-cyan-300">_</span>
+          <!-- LinkedIn CTA -->
+          <a
+            id="nav-linkedin-cta"
+            href="https://linkedin.com/in/delbertaud/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-1.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider font-mono transition-all flex items-center gap-1.5 shadow-sm"
+          >
+            <span>LinkedIn</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button
+          id="mobile-menu-toggle"
+          class="lg:hidden p-2 rounded-sm bg-[#111C30] border border-white/10 text-slate-300 hover:text-white"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+
+      </div>
+
+      <!-- Mobile Dropdown Drawer -->
+      <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#0D1527] border-b border-white/10 px-4 py-4 space-y-3 font-mono text-xs">
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#pillars" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">01 / Pillars</a>
+          <a href="#interactive-ide" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">02 / Live IDE</a>
+          <a href="#case-studies" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">03 / Cases</a>
+          <a href="#roi-calculator" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">04 / ROI Model</a>
+          <a href="#credentials" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">05 / Credentials</a>
+          <a href="#contact" class="p-2.5 bg-[#111C30] rounded-sm text-slate-200 hover:text-[#00C4EE]">06 / Contact</a>
+        </div>
+        <div class="pt-2 border-t border-white/10 flex items-center gap-2">
+          <button data-copy-email="true" class="flex-1 py-2 rounded-sm bg-[#111C30] text-[#00C4EE] border border-white/10 text-center font-bold">
+            <span class="copy-text">Copy Email</span>
+          </button>
+          <a href="https://linkedin.com/in/delbertaud/" target="_blank" class="flex-1 py-2 rounded-sm bg-[#00C4EE] text-[#0A111E] text-center font-bold">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      
+      <!-- =========================================================================
+           HERO SECTION
+           ========================================================================= -->
+      <section id="hero" class="relative pt-12 pb-20 overflow-hidden border-b border-white/10 bg-[#0A111E]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+          
+          <!-- Top Positioning Badges -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-sm bg-[#111C30] border border-cyan-500/30 text-[#00C4EE] text-xs font-mono uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-[#00C4EE] animate-pulse"></span>
+              <span class="font-bold">Executive Systems Architecture</span>
+            </div>
+            <div class="text-xs font-mono text-[#94A3B8] uppercase">
+              Host: <span class="text-white font-bold">delbertaud.com</span>
+            </div>
+          </div>
+
+          <!-- Bold Display Headline -->
+          <div class="space-y-6 max-w-5xl">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[0.95] uppercase">
+              BUSINESS<br>
+              <span class="text-[#00C4EE]">PROCESS</span><br>
+              ARCHITECT
+            </h1>
+            
+            <p class="text-lg sm:text-xl md:text-2xl text-slate-300 font-normal leading-relaxed max-w-3xl">
+              Bridging Senior Business Systems Analysis, technical copywriting, and multi-disciplinary engineering to eliminate operational bottlenecks and scale autonomous workflows.
+            </p>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              id="hero-linkedin-cta"
+              href="https://linkedin.com/in/delbertaud/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-widest transition-all shadow-lg"
+            >
+              <span>Connect on LinkedIn</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+
+            <button
+              id="hero-copy-email-btn"
+              data-copy-email="true"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-white border border-white/10 font-bold text-xs font-mono uppercase tracking-wider transition-all"
+            >
+              <svg class="w-4 h-4 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="copy-text">Copy Email</span>
+            </button>
+
+            <button
+              id="hero-resume-modal-btn"
+              data-open-resume-modal="true"
+              data-modal-tab="resume"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-[#0D1527] hover:bg-[#111C30] text-slate-300 border border-white/10 text-xs font-mono uppercase tracking-wider transition-all"
+            >
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>View &amp; Download Credentials</span>
+            </button>
+          </div>
+
+          <!-- 4 Architectural Focus Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
+            
+            <a href="#pillars" class="p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-[#00C4EE]/50 transition-all block group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">01 / WORKFLOW</span>
+                <span class="text-[10px] font-mono text-slate-500 uppercase">Primary Core</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#00C4EE] transition-colors mb-1.5">
+                AI &amp; Automation Integration
+              </h3>
+              <p class="text-xs text-[#94A3B8] leading-relaxed">
+                RPA pipelines, custom LLM schema extractors, and fault-tolerant background daemons.
+              </p>
+            </a>
+
+            <a href="#pillars" class="p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-[#00C4EE]/50 transition-all block group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">02 / SYSTEMS</span>
+                <span class="text-[10px] font-mono text-slate-500 uppercase">Primary Core</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#00C4EE] transition-colors mb-1.5">
+                Online Solutions Development
+              </h3>
+              <p class="text-xs text-[#94A3B8] leading-relaxed">
+                Internal command centers, high-velocity lead intake, and real-time operations dashboards.
+              </p>
+            </a>
+
+            <a href="#pillars" class="p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-[#00C4EE]/50 transition-all block group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">03 / ENGINEERING</span>
+                <span class="text-[10px] font-mono text-slate-500 uppercase">Specialized Domain</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#00C4EE] transition-colors mb-1.5">
+                Custom Hardware &amp; IoT
+              </h3>
+              <p class="text-xs text-[#94A3B8] leading-relaxed">
+                Embedded C microcontroller controllers, solenoid actuators, and liquid filling automation.
+              </p>
+            </a>
+
+            <a href="#pillars" class="p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-[#00C4EE]/50 transition-all block group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">04 / STRATEGY</span>
+                <span class="text-[10px] font-mono text-slate-500 uppercase">Primary Core</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#00C4EE] transition-colors mb-1.5">
+                Process Streamlining
+              </h3>
+              <p class="text-xs text-[#94A3B8] leading-relaxed">
+                Senior Systems Analysis, value stream mapping, bottleneck removal, and quantified ROI modeling.
+              </p>
+            </a>
+
+          </div>
+
+          <!-- Verified Metrics Counter Row -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/10">
+            <div class="p-4 rounded-sm bg-[#111C30] border border-white/10">
+              <div class="text-3xl sm:text-4xl font-mono font-black text-[#00C4EE]">84%</div>
+              <div class="text-xs font-bold text-white mt-1">Manual Labor Reduction</div>
+              <div class="text-[11px] font-mono text-[#94A3B8]">Across automated workflows</div>
+            </div>
+
+            <div class="p-4 rounded-sm bg-[#111C30] border border-white/10">
+              <div class="text-3xl sm:text-4xl font-mono font-black text-[#00C4EE]">99.9%</div>
+              <div class="text-xs font-bold text-white mt-1">Process Reliability</div>
+              <div class="text-[11px] font-mono text-[#94A3B8]">Fault-tolerant daemon uptime</div>
+            </div>
+
+            <div class="p-4 rounded-sm bg-[#111C30] border border-white/10">
+              <div class="text-3xl sm:text-4xl font-mono font-black text-[#00C4EE]">10x</div>
+              <div class="text-xs font-bold text-white mt-1">Production Throughput</div>
+              <div class="text-[11px] font-mono text-[#94A3B8]">On scaled pipeline batches</div>
+            </div>
+
+            <div class="p-4 rounded-sm bg-[#111C30] border border-white/10">
+              <div class="text-3xl sm:text-4xl font-mono font-black text-[#00C4EE]">4</div>
+              <div class="text-xs font-bold text-white mt-1">Core Architecture Pillars</div>
+              <div class="text-[11px] font-mono text-[#94A3B8]">RPA, AI, Web Ops &amp; IoT</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           01 / CORE TECHNICAL PILLARS
+           ========================================================================= -->
+      <section id="pillars" class="py-20 bg-[#080D18] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+              01 / CORE SERVICE OFFERINGS TAXONOMY
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+              STRATEGIC TECHNICAL PILLARS &amp; OPERATIONAL ROI
+            </h2>
+            <p class="text-sm text-[#94A3B8] max-w-3xl">
+              High-impact architectural pillars structured for enterprise scalability, operational throughput, and cross-functional reliability.
+            </p>
+          </div>
+
+          <!-- Interactive Pillars Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Tabs (4 Pillars) -->
+            <div class="lg:col-span-5 space-y-3">
+              
+              <button
+                data-pillar-tab="bpa"
+                class="w-full text-left p-5 rounded-sm bg-[#111C30] border-2 border-[#00C4EE] transition-all shadow-lg text-white"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-mono font-bold text-[#00C4EE]">01 / PILLAR</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[#0A111E] text-slate-300 border border-white/10">Primary Core</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Business Process Automation</h3>
+                <p class="text-xs text-[#94A3B8] mt-1">End-to-End RPA, legacy data orchestration, and bottleneck elimination.</p>
+              </button>
+
+              <button
+                data-pillar-tab="ai-workflow"
+                class="w-full text-left p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-white/20 transition-all text-slate-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-mono font-bold text-[#00C4EE]">02 / PILLAR</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[#0A111E] text-slate-300 border border-white/10">Primary Core</span>
+                </div>
+                <h3 class="text-base font-bold text-white">AI &amp; Workflow Integration</h3>
+                <p class="text-xs text-[#94A3B8] mt-1">Intelligent document extraction, LLM validation, and autonomous agents.</p>
+              </button>
+
+              <button
+                data-pillar-tab="web-solutions"
+                class="w-full text-left p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-white/20 transition-all text-slate-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-mono font-bold text-[#00C4EE]">03 / PILLAR</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[#0A111E] text-slate-300 border border-white/10">Primary Core</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Online Solutions Development</h3>
+                <p class="text-xs text-[#94A3B8] mt-1">Custom operations command centers, lead ingestion, and real-time portals.</p>
+              </button>
+
+              <button
+                data-pillar-tab="iot-hardware"
+                class="w-full text-left p-5 rounded-sm bg-[#0D1527] border border-white/10 hover:border-white/20 transition-all text-slate-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-mono font-bold text-[#00C4EE]">04 / PILLAR</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[#0A111E] text-cyan-300 border border-cyan-800/40">Specialized Domain</span>
+                </div>
+                <h3 class="text-base font-bold text-white">IoT &amp; Custom Hardware Automation</h3>
+                <p class="text-xs text-[#94A3B8] mt-1">Embedded C firmware, microcontroller mechanics, and liquid filling automation.</p>
+              </button>
+
+            </div>
+
+            <!-- Right Detail Container (Populated dynamically by main.ts) -->
+            <div id="pillar-detail-content" class="lg:col-span-7 p-6 sm:p-8 rounded-sm bg-[#0D1527] border border-white/10 space-y-6">
+              <!-- Dynamically rendered -->
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           02 / LIVE ARCHITECTURAL CODE ENVIRONMENT (IDE)
+           ========================================================================= -->
+      <section id="interactive-ide" class="py-20 bg-[#0A111E] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          <!-- Section Header & Simulation Run Button -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div class="space-y-2">
+              <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+                02 / LIVE ARCHITECTURAL CODE ENVIRONMENT
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+                INTERACTIVE PRODUCTION ARCHITECTURES
+              </h2>
+              <p class="text-sm text-[#94A3B8] max-w-2xl">
+                Inspect genuine architectural code implementations across RPA ingestion, LLM schema parsing, lead pipelines, and embedded C firmware.
+              </p>
+            </div>
+
+            <button
+              id="ide-run-simulation-btn"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-widest font-mono transition-all shadow-md active:scale-95"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <span>Execute Live Simulation</span>
+            </button>
+          </div>
+
+          <!-- IDE Window Frame -->
+          <div class="rounded-sm border border-white/10 bg-[#0D1527] overflow-hidden shadow-2xl">
+            
+            <!-- Window Topbar -->
+            <div class="bg-[#111C30] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span id="ide-filename-display" class="text-xs font-mono font-bold text-white ml-2">
+                  enterprise_rpa_pipeline.py
+                </span>
+              </div>
+
+              <!-- Tab Switchers -->
+              <div class="flex flex-wrap items-center gap-1.5">
+                <button
+                  data-ide-tab="rpa"
+                  class="px-4 py-2.5 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 bg-[#111C30] text-[#00C4EE] border border-cyan-500/40 shadow-sm"
+                >
+                  <span class="text-[#00C4EE]">01</span>
+                  <span>rpa_daemon.py</span>
+                </button>
+
+                <button
+                  data-ide-tab="ai-agent"
+                  class="px-4 py-2.5 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 bg-[#0A111E] text-[#94A3B8] border border-white/10 hover:text-white hover:bg-white/5"
+                >
+                  <span class="text-[#00C4EE]">02</span>
+                  <span>ai_extractor.ts</span>
+                </button>
+
+                <button
+                  data-ide-tab="web-lead-ops"
+                  class="px-4 py-2.5 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 bg-[#0A111E] text-[#94A3B8] border border-white/10 hover:text-white hover:bg-white/5"
+                >
+                  <span class="text-[#00C4EE]">03</span>
+                  <span>lead_gateway.ts</span>
+                </button>
+
+                <button
+                  data-ide-tab="hardware-iot"
+                  class="px-4 py-2.5 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 bg-[#0A111E] text-[#94A3B8] border border-white/10 hover:text-white hover:bg-white/5"
+                >
+                  <span class="text-[#00C4EE]">04</span>
+                  <span>liquid_filler.c</span>
+                </button>
+              </div>
+
+              <!-- Copy Code Action -->
+              <button
+                id="ide-copy-code-btn"
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm bg-[#0A111E] hover:bg-white/10 text-xs font-mono text-slate-300 border border-white/10 transition-colors"
+              >
+                <svg class="w-3.5 h-3.5 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span>Copy Code</span>
+              </button>
+            </div>
+
+            <!-- Description Bar -->
+            <div id="ide-description-display" class="bg-[#0A111E] px-4 py-2 text-xs font-mono text-[#94A3B8] border-b border-white/5">
+              Fault-Tolerant Enterprise RPA Pipeline — Autonomous data ingestion daemon with exponential backoff.
+            </div>
+
+            <!-- Code Editor Body -->
+            <div class="p-4 sm:p-6 bg-[#080D18] max-h-[420px] overflow-y-auto font-mono text-xs text-slate-200">
+              <div id="ide-code-content" class="table w-full">
+                <!-- Lines injected dynamically by main.ts -->
+              </div>
+            </div>
+
+            <!-- Interactive Terminal / Simulation Console -->
+            <div class="border-t border-white/10 bg-[#0A111E]">
+              <div class="px-4 py-2.5 bg-[#111C30] border-b border-white/10 flex items-center justify-between text-xs font-mono">
+                <div class="flex items-center space-x-2 text-[#00C4EE] font-bold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span>LIVE EXECUTION CONSOLE &amp; TELEMETRY</span>
+                </div>
+                <button
+                  id="ide-clear-log-btn"
+                  class="text-[11px] text-slate-400 hover:text-white uppercase tracking-wider"
+                >
+                  Clear Console
+                </button>
+              </div>
+
+              <div id="ide-terminal-logs" class="p-4 space-y-2 min-h-[120px] max-h-[180px] overflow-y-auto text-xs font-mono">
+                <!-- Logs injected dynamically -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           03 / ENGINEERING CASE STUDIES
+           ========================================================================= -->
+      <section id="case-studies" class="py-20 bg-[#080D18] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+              03 / QUANTITATIVE ARCHITECTURAL IMPACT
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+              ENGINEERING CASE STUDIES: PROBLEM / ARCHITECTURE / RESULT
+            </h2>
+            <p class="text-sm text-[#94A3B8] max-w-3xl">
+              Thorough architectural audits and measured performance outcomes across hardware mechanics and enterprise software pipelines.
+            </p>
+          </div>
+
+          <!-- Switcher Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <button
+              data-case-tab="industrial-liquid-filling"
+              class="w-full text-left p-4 rounded-sm bg-[#111C30] border-2 border-[#00C4EE] shadow-md transition-all text-white"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">01 / CASE STUDY</span>
+                <span class="text-[10px] font-mono text-cyan-300">Custom Embedded Hardware</span>
+              </div>
+              <h3 class="text-base font-bold text-white">Industrial Liquid Filling Control System</h3>
+              <p class="text-xs text-[#94A3B8] mt-1">+350% throughput gain, &lt; ±0.5% fill variance, zero product spills.</p>
+            </button>
+
+            <button
+              data-case-tab="enterprise-rpa-transformation"
+              class="w-full text-left p-4 rounded-sm bg-[#0D1527] border border-white/10 hover:border-white/20 transition-all text-slate-300"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-mono font-bold text-[#00C4EE]">02 / CASE STUDY</span>
+                <span class="text-[10px] font-mono text-slate-400">Enterprise Systems &amp; RPA</span>
+              </div>
+              <h3 class="text-base font-bold text-white">Enterprise RPA &amp; Systems Analysis</h3>
+              <p class="text-xs text-[#94A3B8] mt-1">84% manual labor reduction, 115 hrs/wk reclaimed, 0.02% error rate.</p>
+            </button>
+          </div>
+
+          <!-- Detailed Case Study Container (Populated dynamically by main.ts) -->
+          <div id="case-study-detail-content" class="p-6 sm:p-10 rounded-sm bg-[#111C30] border border-white/10 space-y-6">
+            <!-- Rendered by main.ts -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           04 / OPERATIONAL BOTTLENECK & ROI SIMULATOR
+           ========================================================================= -->
+      <section id="roi-calculator" class="py-20 bg-[#0A111E] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+              04 / BUSINESS SYSTEMS ANALYSIS &amp; ROI MODELING
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+              OPERATIONAL BOTTLENECK &amp; ROI SIMULATOR
+            </h2>
+            <p class="text-sm text-[#94A3B8] max-w-3xl">
+              Quantify the financial recovery and reclaimed engineering capacity achieved by eliminating repetitive manual workflows with autonomous systems.
+            </p>
+          </div>
+
+          <!-- Calculator Grid: Controls & Outputs -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Left Controls: 4 Interactive Sliders -->
+            <div class="lg:col-span-7 p-6 sm:p-8 rounded-sm bg-[#0D1527] border border-white/10 space-y-6">
+              
+              <!-- Slider 1: Team Size -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-white font-bold">1. Impacted Team Size:</span>
+                  <span id="label-team-size" class="text-[#00C4EE] font-bold">8 Engineers / Specialists</span>
+                </div>
+                <input
+                  id="slider-team-size"
+                  type="range"
+                  min="1"
+                  max="50"
+                  value="8"
+                  class="w-full accent-[#00C4EE] bg-[#0A111E] cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] font-mono text-slate-500">
+                  <span>1 person</span>
+                  <span>50 people</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Manual Hours -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-white font-bold">2. Repetitive Manual Hours / Person / Week:</span>
+                  <span id="label-hours" class="text-[#00C4EE] font-bold">14 hrs / person / week</span>
+                </div>
+                <input
+                  id="slider-hours"
+                  type="range"
+                  min="2"
+                  max="35"
+                  value="14"
+                  class="w-full accent-[#00C4EE] bg-[#0A111E] cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] font-mono text-slate-500">
+                  <span>2 hrs</span>
+                  <span>35 hrs</span>
+                </div>
+              </div>
+
+              <!-- Slider 3: Hourly Rate -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-white font-bold">3. Blended Loaded Hourly Rate:</span>
+                  <span id="label-rate" class="text-[#00C4EE] font-bold">$55 / hr</span>
+                </div>
+                <input
+                  id="slider-rate"
+                  type="range"
+                  min="25"
+                  max="175"
+                  step="5"
+                  value="55"
+                  class="w-full accent-[#00C4EE] bg-[#0A111E] cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] font-mono text-slate-500">
+                  <span>$25/hr</span>
+                  <span>$175/hr</span>
+                </div>
+              </div>
+
+              <!-- Slider 4: Automation Efficiency -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-white font-bold">4. Target Automation Replacement Rate:</span>
+                  <span id="label-efficiency" class="text-[#00C4EE] font-bold">80% automation rate</span>
+                </div>
+                <input
+                  id="slider-efficiency"
+                  type="range"
+                  min="50"
+                  max="95"
+                  step="5"
+                  value="80"
+                  class="w-full accent-[#00C4EE] bg-[#0A111E] cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] font-mono text-slate-500">
+                  <span>50%</span>
+                  <span>95%</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Calculation Display Card -->
+            <div class="lg:col-span-5 p-6 sm:p-8 rounded-sm bg-[#111C30] border-2 border-[#00C4EE] flex flex-col justify-between space-y-6 shadow-xl">
+              
+              <div>
+                <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-wider mb-2">
+                  PROJECTED ANNUAL OPERATIONAL RECOVERY
+                </div>
+                <div id="output-annual-savings" class="text-4xl sm:text-5xl font-mono font-black text-white tracking-tight">
+                  $256,256
+                </div>
+                <div class="text-xs font-mono text-slate-300 mt-1">
+                  Estimated annual operational expense eliminated
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                <div class="p-3.5 rounded-sm bg-[#0A111E] border border-white/10">
+                  <div class="text-xs font-mono text-[#94A3B8] uppercase">Monthly Recovery:</div>
+                  <div id="output-monthly-savings" class="text-lg font-mono font-bold text-[#00C4EE] mt-1">
+                    $21,355 / mo
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-sm bg-[#0A111E] border border-white/10">
+                  <div class="text-xs font-mono text-[#94A3B8] uppercase">Labor Reclaimed:</div>
+                  <div id="output-hours-reclaimed" class="text-lg font-mono font-bold text-emerald-400 mt-1">
+                    4,659 hrs / yr
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-sm bg-[#0A111E] border border-white/10 space-y-1">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-slate-400">Capital Recovery Window:</span>
+                  <span class="text-emerald-400 font-bold">&lt; 45 Days</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono">
+                  Based on average 4-6 week custom deployment lifecycle.
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="w-full text-center py-3 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-widest font-mono transition-all shadow-md block"
+              >
+                Schedule Systems Bottleneck Audit
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           05 / STATIC CREDENTIAL ASSETS & DOWNLOADS
+           ========================================================================= -->
+      <section id="credentials" class="py-20 bg-[#080D18] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+              05 / STATIC CREDENTIAL ASSETS &amp; ARCHIVES
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+              DOWNLOADABLE CREDENTIAL ASSETS
+            </h2>
+            <p class="text-sm text-[#94A3B8] max-w-3xl">
+              Direct access to formatted executive resumes and detailed technical chronicles. Generated client-side for rapid offline review.
+            </p>
+          </div>
+
+          <!-- 4 Download Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1: Resume PDF -->
+            <div class="p-6 rounded-sm bg-[#111C30] border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded-sm bg-cyan-950 text-[#00C4EE] text-[10px] font-mono font-bold border border-cyan-800">PDF FORMAT</span>
+                  <span class="text-[10px] font-mono text-slate-400">184 KB</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Executive Resume (PDF)</h3>
+                <p class="text-xs text-[#94A3B8]">
+                  Standard executive resume for recruiter review and hiring managers.
+                </p>
+              </div>
+
+              <div class="space-y-2 pt-2 border-t border-white/10">
+                <button
+                  data-download-asset="delbert_aud_resume.pdf"
+                  class="w-full py-2.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider font-mono transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>Download PDF</span>
+                </button>
+
+                <button
+                  data-open-resume-modal="true"
+                  data-modal-tab="resume"
+                  class="w-full py-2 rounded-sm bg-[#0A111E] hover:bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider transition-all"
+                >
+                  Inspect Online
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Resume DOCX -->
+            <div class="p-6 rounded-sm bg-[#0D1527] border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded-sm bg-blue-950 text-blue-400 text-[10px] font-mono font-bold border border-blue-800">DOCX FORMAT</span>
+                  <span class="text-[10px] font-mono text-slate-400">142 KB</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Executive Resume (DOCX)</h3>
+                <p class="text-xs text-[#94A3B8]">
+                  Formatted Microsoft Word version for Applicant Tracking Systems (ATS).
+                </p>
+              </div>
+
+              <div class="space-y-2 pt-2 border-t border-white/10">
+                <button
+                  data-download-asset="delbert_aud_resume.docx"
+                  class="w-full py-2.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider font-mono border border-white/10 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>Download DOCX</span>
+                </button>
+
+                <button
+                  data-open-resume-modal="true"
+                  data-modal-tab="resume"
+                  class="w-full py-2 rounded-sm bg-[#0A111E] hover:bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider transition-all"
+                >
+                  Inspect Online
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: Work History PDF -->
+            <div class="p-6 rounded-sm bg-[#111C30] border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded-sm bg-cyan-950 text-[#00C4EE] text-[10px] font-mono font-bold border border-cyan-800">PDF FORMAT</span>
+                  <span class="text-[10px] font-mono text-slate-400">220 KB</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Detailed Work History (PDF)</h3>
+                <p class="text-xs text-[#94A3B8]">
+                  Complete technical project chronicles and architectural deliverables.
+                </p>
+              </div>
+
+              <div class="space-y-2 pt-2 border-t border-white/10">
+                <button
+                  data-download-asset="delbert_aud_work_history.pdf"
+                  class="w-full py-2.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider font-mono transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>Download PDF</span>
+                </button>
+
+                <button
+                  data-open-resume-modal="true"
+                  data-modal-tab="work_history"
+                  class="w-full py-2 rounded-sm bg-[#0A111E] hover:bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider transition-all"
+                >
+                  Inspect Online
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: Work History DOCX -->
+            <div class="p-6 rounded-sm bg-[#0D1527] border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded-sm bg-blue-950 text-blue-400 text-[10px] font-mono font-bold border border-blue-800">DOCX FORMAT</span>
+                  <span class="text-[10px] font-mono text-slate-400">168 KB</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Detailed Work History (DOCX)</h3>
+                <p class="text-xs text-[#94A3B8]">
+                  Editable project archive and technical case study documentation.
+                </p>
+              </div>
+
+              <div class="space-y-2 pt-2 border-t border-white/10">
+                <button
+                  data-download-asset="delbert_aud_work_history.docx"
+                  class="w-full py-2.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider font-mono border border-white/10 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>Download DOCX</span>
+                </button>
+
+                <button
+                  data-open-resume-modal="true"
+                  data-modal-tab="work_history"
+                  class="w-full py-2 rounded-sm bg-[#0A111E] hover:bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider transition-all"
+                >
+                  Inspect Online
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Static Filename Policy Statement -->
+          <div class="p-4 rounded-sm bg-[#0A111E] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#94A3B8]">
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Static document assets maintain persistent canonical filenames without ephemeral version suffixes.</span>
+            </div>
+            <code class="text-[#00C4EE] bg-[#111C30] px-2 py-1 rounded-sm border border-white/10">delbert_aud_resume.pdf</code>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           06 / DIRECT CONTACT & OUTREACH BUILDER
+           ========================================================================= -->
+      <section id="contact" class="py-20 bg-[#0A111E] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-widest">
+              06 / EXECUTIVE CONTACT &amp; ENGAGEMENT
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+              INITIATE DIRECT TECHNICAL ENGAGEMENT
+            </h2>
+            <p class="text-sm text-[#94A3B8] max-w-3xl">
+              Available for full-time executive architecture roles, fractional advisory engagements, and targeted operational audits.
+            </p>
+          </div>
+
+          <!-- Contact Layout Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Info Panel -->
+            <div class="lg:col-span-5 p-6 sm:p-8 rounded-sm bg-[#0D1527] border border-white/10 space-y-6">
+              
+              <div class="space-y-3">
+                <div class="text-xs font-mono font-bold text-[#00C4EE] uppercase tracking-wider">
+                  Direct Inquiries
+                </div>
+                <div class="flex items-center bg-[#111C30] border border-white/10 rounded-sm overflow-hidden text-xs font-mono">
+                  <span class="px-3 py-2.5 text-white select-all flex-1 truncate">
+                    delbert.aud@gmail.com
+                  </span>
+                  <button
+                    data-copy-email="true"
+                    class="px-3 py-2.5 bg-white/5 hover:bg-white/10 text-[#00C4EE] border-l border-white/10 uppercase font-bold transition-colors"
+                  >
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-white/10">
+                <div class="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                  Professional Network
+                </div>
+                <a
+                  href="https://linkedin.com/in/delbertaud/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider font-mono transition-all flex items-center justify-center gap-2 shadow-sm"
+                >
+                  <span>Connect on LinkedIn</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+
+              <div class="space-y-2 pt-4 border-t border-white/10 text-xs font-mono text-slate-300">
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Location:</span>
+                  <span class="text-white">United States / Remote</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Response SLA:</span>
+                  <span class="text-[#00C4EE]">&lt; 24 Hours</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Target Domain:</span>
+                  <span class="text-white">delbertaud.com</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Interactive Outreach Builder -->
+            <div class="lg:col-span-7 p-6 sm:p-8 rounded-sm bg-[#111C30] border border-white/10 space-y-5">
+              
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                  One-Click Outreach Message Generator
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  <button
+                    data-template="fulltime"
+                    class="px-3 py-1.5 rounded-sm bg-cyan-950 text-[#00C4EE] border border-cyan-500/50 text-xs font-mono font-bold uppercase tracking-wider"
+                  >
+                    Full-Time Role
+                  </button>
+                  <button
+                    data-template="consulting"
+                    class="px-3 py-1.5 rounded-sm bg-[#0A111E] text-slate-400 border border-white/10 hover:text-white text-xs font-mono font-bold uppercase tracking-wider"
+                  >
+                    Systems Audit
+                  </button>
+                  <button
+                    data-template="hardware"
+                    class="px-3 py-1.5 rounded-sm bg-[#0A111E] text-slate-400 border border-white/10 hover:text-white text-xs font-mono font-bold uppercase tracking-wider"
+                  >
+                    Hardware IoT
+                  </button>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div>
+                  <label class="block text-[11px] font-mono text-[#94A3B8] uppercase mb-1">Subject Line:</label>
+                  <input
+                    id="outreach-subject"
+                    type="text"
+                    readonly
+                    class="w-full px-3 py-2 rounded-sm bg-[#0A111E] border border-white/10 text-xs font-mono text-white select-all focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-[11px] font-mono text-[#94A3B8] uppercase mb-1">Formatted Message Body:</label>
+                  <textarea
+                    id="outreach-body"
+                    rows="6"
+                    readonly
+                    class="w-full p-3 rounded-sm bg-[#0A111E] border border-white/10 text-xs font-mono text-slate-200 select-all leading-relaxed focus:outline-none resize-none"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between gap-3 pt-2">
+                <button
+                  id="outreach-copy-btn"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider font-mono transition-all shadow-md"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>Copy Formatted Message</span>
+                </button>
+
+                <span class="text-[11px] font-mono text-slate-500 hidden sm:inline">
+                  Paste directly into your email client
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer class="bg-[#080D18] border-t border-white/10 text-[#94A3B8] font-sans pb-20 md:pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/10">
+          
+          <!-- Identity & Mission -->
+          <div class="md:col-span-5 space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-sm bg-[#111C30] border border-white/10 flex items-center justify-center text-[#00C4EE]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="font-black text-white tracking-tight text-lg leading-none">
+                DELBERT<span class="text-[#00C4EE]">AUD</span>
+              </span>
+            </div>
+            
+            <p class="text-xs text-[#94A3B8] leading-relaxed max-w-sm">
+              Business Process Automation Architect. Specializing in enterprise workflow orchestration, AI integration, online systems engineering, and embedded industrial IoT controllers.
+            </p>
+
+            <div class="flex items-center space-x-2 text-xs font-mono text-slate-300">
+              <span>Domain:</span>
+              <code class="text-[#00C4EE] bg-[#111C30] px-2 py-0.5 rounded-sm border border-white/10">delbertaud.com</code>
+            </div>
+          </div>
+
+          <!-- Core Service Links -->
+          <div class="md:col-span-3 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">
+              Architecture Pillars
+            </h4>
+            <ul class="space-y-2 text-xs font-mono">
+              <li>
+                <a href="#pillars" class="hover:text-[#00C4EE] transition-colors">01 / AI &amp; Automation</a>
+              </li>
+              <li>
+                <a href="#pillars" class="hover:text-[#00C4EE] transition-colors">02 / Online Solutions</a>
+              </li>
+              <li>
+                <a href="#pillars" class="hover:text-[#00C4EE] transition-colors">03 / Custom Hardware IoT</a>
+              </li>
+              <li>
+                <a href="#pillars" class="hover:text-[#00C4EE] transition-colors">04 / Process Streamlining</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Access & Direct Contact -->
+          <div class="md:col-span-4 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">
+              Direct Recruiter Access
+            </h4>
+            <div class="space-y-2">
+              <div class="flex items-center bg-[#111C30] border border-white/10 rounded-sm overflow-hidden">
+                <span class="px-3 py-2 text-xs font-mono text-[#94A3B8] select-all truncate">
+                  delbert.aud@gmail.com
+                </span>
+                <button
+                  data-copy-email="true"
+                  class="bg-white/5 px-3 py-2 text-[10px] uppercase font-bold font-mono tracking-wider border-l border-white/10 hover:bg-white/10 text-slate-200 transition-colors flex items-center gap-1 shrink-0"
+                >
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+
+              <div class="flex items-center space-x-2 pt-1">
+                <a
+                  href="https://linkedin.com/in/delbertaud/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  <span>LinkedIn</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+
+                <button
+                  data-open-resume-modal="true"
+                  data-modal-tab="resume"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-sm bg-[#111C30] hover:bg-white/10 text-slate-200 border border-white/10 text-xs font-mono uppercase tracking-wider transition-all"
+                >
+                  <svg class="w-3.5 h-3.5 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  <span>Resume</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="pt-2 flex items-center justify-between">
-            <button id="run-demo-btn" onclick="runTerminalDemo()" class="px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 border border-cyan-500/40 text-[11px] font-bold font-sans transition-all cursor-pointer">
-              ▶ Run Agent Test
-            </button>
-            <span class="text-[10px] text-slate-400 font-sans">Delbert Aud Automation Engine</span>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#94A3B8]">
+          <div class="flex items-center space-x-2">
+            <span>© 2026 Delbert Aud. Hosted on delbertaud.com.</span>
+          </div>
+
+          <div class="flex items-center space-x-6">
+            <span class="text-[11px] text-slate-500">
+              Autonomous Systems • Multi-Agent Pipelines
+            </span>
+
+            <a
+              href="#hero"
+              class="inline-flex items-center gap-1 text-[#00C4EE] hover:underline"
+            >
+              <span>Back to Top</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+            </a>
           </div>
         </div>
+
       </div>
+    </footer>
 
-    </div>
-  </section>
-
-  <!-- QUICK CAPABILITY CARDS -->
-  <section class="px-6 sm:px-12 py-12 border-y border-slate-800/80 bg-slate-950/50">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-cyan-500/40 transition-all space-y-3">
-        <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center border border-cyan-500/20 text-cyan-400">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <h3 class="text-white font-bold text-lg">Enterprise AI Strategy, Custom RAG &amp; Gemini API Deployment</h3>
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Scale your business with custom multimodal AI agents and automated workflows. Powered by Google’s Gemini API, we implement long-context document reasoning, real-time function calling, and secure local RAG pipelines—delivering grounded insights, structured data extraction, and seamless workflow automation.
-        </p>
-      </div>
-
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-blue-500/40 transition-all space-y-3">
-        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 text-blue-400">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-        </div>
-        <h3 class="text-white font-bold text-lg">High-Performance Backend Engineering &amp; Systems Modernization</h3>
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Supercharge your business infrastructure with scalable, secure backend engineering. From high-concurrency systems in Go, Python, Java, and C/C++ to algorithm optimization, optimized SQL data layers, and legacy modernizations—we architect resilient APIs and low-latency engines that drive operational reliability.
-        </p>
-      </div>
-
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-purple-500/40 transition-all space-y-3">
-        <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center border border-purple-500/20 text-purple-400">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-        </div>
-        <h3 class="text-white font-bold text-lg">Process Automation &amp; Unattended Workflow Optimization</h3>
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Reclaim lost employee hours and eliminate manual data entry errors. Using tailored Python desktop bots, PowerShell scripts, and background task schedulers, we create seamless, unattended automated workflows across your legacy applications and cloud systems—delivering 24/7 reliability and reduced operational costs.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SOLUTIONS & SERVICES SECTION -->
-  <section id="solutions" class="px-6 sm:px-12 py-20 relative">
-    <div class="max-w-7xl mx-auto space-y-12">
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">
-          <span>Enterprise Services Catalog</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Technical Core Offerings</h2>
-        <p class="text-slate-300 text-sm">
-          Comprehensive consulting capabilities tailored for organizations seeking to eliminate manual operational waste and elevate system security.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- =========================================================================
+         MOBILE FLOATING BOTTOM BAR
+         ========================================================================= -->
+    <div id="mobile-bottom-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-[#0D1527]/95 backdrop-blur-md border-t border-white/10 p-3 sm:hidden shadow-2xl">
+      <div class="flex items-center justify-between gap-2 max-w-md mx-auto">
         
-        <!-- Offering 1 -->
-        <div class="rounded-3xl bg-slate-900/80 border border-slate-800 p-8 space-y-6 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">01 / AI & ML</span>
-            <span class="text-xs font-code text-slate-400">Ollama • n8n • RAG • Gemini</span>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-white">Generative AI & Autonomous Agents</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Design and deployment of private AI agent pipelines. Leverage local LLMs to query enterprise knowledge bases securely without exposing sensitive IP to public cloud models.
-            </p>
-          </div>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> RAG vector database indexing for financial & legal records</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> n8n automated agent workflows with custom error retries</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Gemini API integration for document summary & extraction</li>
-          </ul>
-        </div>
+        <button
+          data-copy-email="true"
+          class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-slate-200 border border-white/10 text-xs font-mono font-bold uppercase tracking-wider transition-all active:scale-95"
+        >
+          <svg class="w-3.5 h-3.5 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span class="copy-text">Copy Email</span>
+        </button>
 
-        <!-- Offering 2 -->
-        <div class="rounded-3xl bg-slate-900/80 border border-slate-800 p-8 space-y-6 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/30">02 / RPA</span>
-            <span class="text-xs font-code text-slate-400">Automation Anywhere • Python</span>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-white">Robotic Process Automation</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Eliminate repetitive manual data entry between legacy desktop systems, mainframe terminals, and web portals using resilient unattended bot scripts.
-            </p>
-          </div>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Automation Anywhere bot development & migration</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Python & Selenium web scraping & automated form submission</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Win32 API desktop GUI automation</li>
-          </ul>
-        </div>
+        <button
+          data-open-resume-modal="true"
+          data-modal-tab="resume"
+          class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-slate-200 border border-white/10 text-xs font-mono font-bold uppercase tracking-wider transition-all active:scale-95"
+        >
+          <svg class="w-3.5 h-3.5 text-[#00C4EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Resume</span>
+        </button>
 
-        <!-- Offering 3 -->
-        <div class="rounded-3xl bg-slate-900/80 border border-slate-800 p-8 space-y-6 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/30">03 / CODE</span>
-            <span class="text-xs font-code text-slate-400">C++ • Python • Go • SQL</span>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-white">High-Performance Programming</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Custom backend systems development focused on raw execution speed, low latency, memory safety, and clean SQL query optimization.
-            </p>
-          </div>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Legacy C/C++ backend modernization & refactoring</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> High-throughput Python & Go microservices</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> SQL stored procedures, indexing, and data pipeline tuning</li>
-          </ul>
-        </div>
-
-        <!-- Offering 4 -->
-        <div class="rounded-3xl bg-slate-900/80 border border-slate-800 p-8 space-y-6 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">04 / SECURITY</span>
-            <span class="text-xs font-code text-slate-400">Security • Cloud • AWS • Azure</span>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-white">Security & Cloud Architecture</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Expert guidance on securing cloud deployments, encrypting automated pipelines, and enforcing strict RBAC access controls.
-            </p>
-          </div>
-          <ul class="space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Zero-trust security auditing for automated scripts</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Cloud migration architecture (AWS / Azure / GCP)</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Enterprise risk management & compliance reviews</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- AUTOMATION ROI CALCULATOR -->
-  <section id="roi-calculator" class="px-6 sm:px-12 py-20 relative">
-    <div class="max-w-5xl mx-auto space-y-10">
-      <div class="text-center space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-          <span>Financial Feasibility Engine</span>
-        </div>
-        <h2 class="text-3xl font-extrabold text-white">Automation ROI Calculator</h2>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-          Calculate the exact annual financial return and hour savings achieved by automating repetitive manual workflows.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Inputs -->
-        <div class="lg:col-span-7 rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-8 space-y-6">
-          <div class="space-y-2">
-            <div class="flex justify-between text-xs font-bold">
-              <span class="text-slate-300">Weekly Hours Spent on Task:</span>
-              <span id="roi-hours-val" class="text-cyan-400 font-code font-bold">25 hrs / week</span>
-            </div>
-            <input type="range" id="roi-hours" min="5" max="100" value="25" oninput="calculateRoi()" class="w-full accent-cyan-400 bg-slate-950 h-2 rounded-lg cursor-pointer" />
-          </div>
-
-          <div class="space-y-2">
-            <div class="flex justify-between text-xs font-bold">
-              <span class="text-slate-300">Average Hourly Labor Rate ($):</span>
-              <span id="roi-rate-val" class="text-cyan-400 font-code font-bold">$45 / hr</span>
-            </div>
-            <input type="range" id="roi-rate" min="20" max="150" value="45" oninput="calculateRoi()" class="w-full accent-cyan-400 bg-slate-950 h-2 rounded-lg cursor-pointer" />
-          </div>
-
-          <div class="space-y-2">
-            <div class="flex justify-between text-xs font-bold">
-              <span class="text-slate-300">Team Members Performing Task:</span>
-              <span id="roi-team-val" class="text-cyan-400 font-code font-bold">4 employees</span>
-            </div>
-            <input type="range" id="roi-team" min="1" max="25" value="4" oninput="calculateRoi()" class="w-full accent-cyan-400 bg-slate-950 h-2 rounded-lg cursor-pointer" />
-          </div>
-
-          <div class="space-y-2">
-            <div class="flex justify-between text-xs font-bold">
-              <span class="text-slate-300">Target Automation Efficiency:</span>
-              <span id="roi-efficiency-val" class="text-cyan-400 font-code font-bold">85% automated</span>
-            </div>
-            <input type="range" id="roi-efficiency" min="50" max="95" value="85" oninput="calculateRoi()" class="w-full accent-cyan-400 bg-slate-950 h-2 rounded-lg cursor-pointer" />
-          </div>
-        </div>
-
-        <!-- Calculated Metrics -->
-        <div class="lg:col-span-5 rounded-3xl bg-slate-900 border border-emerald-500/30 p-6 sm:p-8 space-y-6 text-center">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block">Projected Financial Impact</span>
-          
-          <div class="space-y-1">
-            <div id="calc-savings" class="text-4xl font-black text-emerald-400 font-code">$198,900</div>
-            <span class="text-xs text-slate-400 font-medium">Estimated Annual Financial Savings</span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-            <div class="p-3 rounded-2xl bg-slate-950 border border-slate-800">
-              <div id="calc-hours" class="text-lg font-bold text-cyan-400 font-code">4,420</div>
-              <span class="text-[10px] text-slate-400 block">Hours Saved / Year</span>
-            </div>
-
-            <div class="p-3 rounded-2xl bg-slate-950 border border-slate-800">
-              <div id="calc-payback" class="text-lg font-bold text-white font-code">&lt; 1.8 Mos</div>
-              <span class="text-[10px] text-slate-400 block">Projected Payback</span>
-            </div>
-          </div>
-
-          <a href="#contact" class="w-full py-3 rounded-xl text-xs font-bold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all block text-center shadow-lg shadow-cyan-500/20">
-            Get in Touch with Delbert
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES & TRACK RECORD -->
-  <section id="portfolio" class="px-6 sm:px-12 py-20 bg-slate-950 border-t border-slate-800/80">
-    <div class="max-w-7xl mx-auto space-y-10">
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">
-          <span>Enterprise Track Record</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Verified Case Studies</h2>
-        <p class="text-slate-300 text-sm">
-          Proven implementations delivering quantifiable ROI across financial services, healthcare, logistics, and IT backend systems.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- Case Study 1 -->
-        <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-6 space-y-4 hover:border-cyan-500/40 transition-all flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">Investment Tracking</span>
-              <span class="text-emerald-400 font-code font-bold text-sm">Every 30 Mins</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Investment Tracking System</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Download investment ticker data every half-hour, analyze data, generate and execute a prompt and output a report.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <div class="flex gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded text-[10px] font-code bg-slate-950 text-slate-300 border border-slate-800">Python</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-code bg-slate-950 text-slate-300 border border-slate-800">Gemini API</span>
-            </div>
-            <span class="text-xs font-bold text-cyan-400">Verified Result</span>
-          </div>
-        </div>
-
-        <!-- Case Study 2 -->
-        <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-6 space-y-4 hover:border-cyan-500/40 transition-all flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-blue-500/10 text-blue-400 border border-blue-500/30">ITSM Automation</span>
-              <span class="text-emerald-400 font-code font-bold text-sm">Auto-Assigned</span>
-            </div>
-            <h3 class="text-xl font-bold text-white">Ivanti Ticket Assignment Processing</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Download unassigned Ivanti tickets, process tickets through a rules engine and post back to Ivanti to assign the ticket to the best resource.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <div class="flex gap-1.5 flex-wrap">
-              <span class="px-2 py-0.5 rounded text-[10px] font-code bg-slate-950 text-slate-300 border border-slate-800">Ivanti</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-code bg-slate-950 text-slate-300 border border-slate-800">Python</span>
-            </div>
-            <span class="text-xs font-bold text-cyan-400">Verified Result</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- DIRECT CONTACT SECTION -->
-  <section id="contact" class="px-6 sm:px-12 py-20 relative">
-    <div class="max-w-4xl mx-auto space-y-10">
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">
-          <span>Direct Contact</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Get in Touch with Delbert Aud</h2>
-        <p class="text-slate-300 text-sm">
-          Reach out directly via email or telephone to discuss your automation projects, AI integration, RPA deployment, or contract engagement opportunities.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <!-- Direct Email Card -->
-        <div class="rounded-3xl bg-slate-900 border border-slate-800 p-6 space-y-4 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Direct Email</span>
-            <span class="px-2 py-0.5 rounded text-[10px] font-code bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Email</span>
-          </div>
-          <div>
-            <a href="mailto:delbert.aud@gmail.com" class="text-lg font-bold text-cyan-300 hover:underline">delbert.aud@gmail.com</a>
-            <p class="text-xs text-slate-400 mt-1">Direct inbox for project inquiries & contract discussions.</p>
-          </div>
-          <a href="mailto:delbert.aud@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/20 transition-all">
-            <span>Send Email</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-
-        <!-- Direct Phone Card -->
-        <div class="rounded-3xl bg-slate-900 border border-slate-800 p-6 space-y-4 hover:border-cyan-500/40 transition-all">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Phone Contact</span>
-            <span class="px-2 py-0.5 rounded text-[10px] font-code bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Phone</span>
-          </div>
-          <div>
-            <a href="tel:7024492337" class="text-lg font-bold text-cyan-300 hover:underline">(702) 449-2337</a>
-            <p class="text-xs text-slate-400 mt-1">Direct phone line for immediate inquiries.</p>
-          </div>
-          <a href="tel:7024492337" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/20 transition-all">
-            <span>Call Now</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Resume & Location Bar -->
-      <div class="rounded-2xl bg-slate-900 border border-slate-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="space-y-1 text-center sm:text-left">
-          <span class="text-xs font-bold text-white">Location & Work Availability</span>
-          <p class="text-xs text-slate-400">Henderson, NV (US Citizen) • 100% Remote Engagements</p>
-        </div>
-        <a href="/resume" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 transition-all text-center whitespace-nowrap">
-          Review Full Resume & Requirements
+        <a
+          href="https://linkedin.com/in/delbertaud/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-sm bg-[#00C4EE] hover:bg-[#00D2FF] text-[#0A111E] font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95"
+        >
+          <span>LinkedIn</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
+
       </div>
     </div>
-  </section>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-slate-800/80 text-slate-400 py-12 text-xs mt-auto">
-    <div class="max-w-7xl mx-auto px-6 sm:px-12 space-y-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 font-bold text-white flex items-center justify-center text-xs">
-            DA
+    <!-- =========================================================================
+         RESUME & WORK HISTORY MODAL
+         ========================================================================= -->
+    <div id="resume-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
+      <div class="relative w-full max-w-5xl bg-[#0D1527] border border-white/10 rounded-lg shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        
+        <!-- Modal Header -->
+        <div class="bg-[#111C30] px-6 py-4 border-b border-white/10 flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="p-2 rounded-sm bg-[#0A111E] border border-white/10 text-[#00C4EE]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white uppercase tracking-wider font-mono">
+                Executive Credentials &amp; Document Archive
+              </h3>
+              <p class="text-xs font-mono text-[#94A3B8]">
+                Delbert Aud • Business Process Automation Architect
+              </p>
+            </div>
           </div>
-          <span class="text-sm font-bold text-white">DELBERT AUD CONSULTING</span>
-          <span class="px-2 py-0.5 rounded text-[10px] font-code bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Security & Cloud</span>
+
+          <button
+            id="resume-modal-close-btn"
+            class="p-2 rounded-sm bg-[#0A111E] hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors"
+            aria-label="Close modal"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
         </div>
 
-        <div class="flex flex-wrap items-center gap-6">
-          <a href="/resume" class="text-slate-300 hover:text-cyan-400 font-bold transition-colors">RESUME & REQUIREMENTS</a>
-          <a href="/Delbert_Aud_Resume.docx" download="Delbert_Aud_Resume.docx" class="hover:text-cyan-400 transition-colors">Delbert_Aud_Resume.docx</a>
-          <a href="/Delbert_Aud_Work_History.docx" download="Delbert_Aud_Work_History.docx" class="hover:text-cyan-400 transition-colors">Delbert_Aud_Work_History.docx</a>
-        </div>
-      </div>
+        <!-- Document Switcher Toolbar -->
+        <div class="bg-[#0A111E] px-6 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+          
+          <!-- Tabs -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="modal-tab-resume"
+              class="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 bg-cyan-950 text-[#00C4EE] border border-cyan-500/50 shadow-sm"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Executive Resume</span>
+            </button>
 
-      <div class="pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-        <div>© <script>document.write(new Date().getFullYear())</script> DELBERT AUD CONSULTING. ALL RIGHTS RESERVED.</div>
-        <div>Henderson, NV • (702) 449-2337 • delbert.aud@gmail.com</div>
+            <button
+              id="modal-tab-history"
+              class="px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider font-bold transition-all flex items-center gap-2 text-[#94A3B8] hover:text-white hover:bg-white/5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Detailed Work History</span>
+            </button>
+          </div>
+
+          <!-- Direct Download Buttons -->
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-mono text-[#94A3B8] uppercase hidden sm:inline">Direct Download:</span>
+            
+            <button
+              id="modal-download-pdf-btn"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-[#00C4EE] border border-white/10 text-xs font-mono uppercase tracking-wider transition-all"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download PDF</span>
+            </button>
+
+            <button
+              id="modal-download-docx-btn"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-[#111C30] hover:bg-white/10 text-slate-300 border border-white/10 text-xs font-mono uppercase tracking-wider transition-all"
+            >
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download DOCX</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Scrollable Document View Container -->
+        <div class="p-6 sm:p-10 overflow-y-auto bg-[#080D18] flex-1">
+          <div class="max-w-4xl mx-auto bg-[#0D1527] border border-white/10 rounded-sm p-6 sm:p-10 text-slate-200 shadow-xl space-y-8 font-sans">
+            
+            <!-- Document Header -->
+            <div class="border-b border-white/10 pb-6">
+              <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div>
+                  <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    DELBERT AUD
+                  </h1>
+                  <h2 class="text-base font-bold text-[#00C4EE] font-mono mt-1 uppercase tracking-wider">
+                    Business Process Automation Architect
+                  </h2>
+                  <p class="text-xs font-mono text-[#94A3B8] mt-1">
+                    Senior Business Systems Analysis • Technical Copywriting • Multi-Disciplinary Engineering
+                  </p>
+                </div>
+
+                <div class="text-xs font-mono text-slate-300 space-y-1 sm:text-right">
+                  <div>Email: <span class="text-[#00C4EE]">delbert.aud@gmail.com</span></div>
+                  <div>LinkedIn: <a href="https://linkedin.com/in/delbertaud/" target="_blank" class="hover:text-cyan-300 underline">linkedin.com/in/delbertaud</a></div>
+                  <div>Domain: <span class="text-white">delbertaud.com</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Document Body -->
+            <div id="modal-document-body">
+              <!-- Injected dynamically by main.ts -->
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
-  </footer>
 
-  <!-- VANILLA JAVASCRIPT CONTROLLERS -->
-  <script>
-    // Terminal Demo execution
-    function runTerminalDemo() {
-      const logs = document.getElementById('terminal-logs');
-      logs.innerHTML = `
-        <div class="text-cyan-400">[EXEC]: Running neural_engine.process_request()...</div>
-        <div class="text-slate-300">[12:08:31] Scanning legacy SQL schemas...</div>
-        <div class="text-slate-300">[12:08:32] Vector embeddings generated via Ollama</div>
-        <div class="text-emerald-400">[12:08:33] RPA Bot deployed: 0 errors detected</div>
-        <div class="text-cyan-300 font-bold flex items-center gap-1 mt-1">
-          <span>[SUCCESS]: Bottlenecks eliminated (Efficiency: 98.4%)</span>
-          <span class="animate-pulse">_</span>
-        </div>
-      `;
-    }
-
-    // ROI Calculator calculation logic
-    function calculateRoi() {
-      const hours = parseFloat(document.getElementById('roi-hours').value);
-      const rate = parseFloat(document.getElementById('roi-rate').value);
-      const team = parseFloat(document.getElementById('roi-team').value);
-      const eff = parseFloat(document.getElementById('roi-efficiency').value) / 100;
-
-      document.getElementById('roi-hours-val').textContent = hours + ' hrs / week';
-      document.getElementById('roi-rate-val').textContent = '$' + rate + ' / hr';
-      document.getElementById('roi-team-val').textContent = team + ' employees';
-      document.getElementById('roi-efficiency-val').textContent = Math.round(eff * 100) + '% automated';
-
-      const annualHoursSaved = Math.round(hours * 52 * team * eff);
-      const annualFinancialSavings = Math.round(annualHoursSaved * rate);
-
-      document.getElementById('calc-hours').textContent = annualHoursSaved.toLocaleString();
-      document.getElementById('calc-savings').textContent = '$' + annualFinancialSavings.toLocaleString();
-    }
-
-    // Contact Form submission AJAX
-    async function handleContactSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('contact-name').value;
-      const email = document.getElementById('contact-email').value;
-      const company = document.getElementById('contact-company').value;
-      const engagement = document.getElementById('contact-engagement').value;
-      const service = document.getElementById('contact-service').value;
-      const details = document.getElementById('contact-details').value;
-
-      const submitBtn = document.getElementById('contact-submit-btn');
-      const statusDiv = document.getElementById('contact-status');
-
-      submitBtn.disabled = true;
-      submitBtn.innerText = 'Submitting Inquiry...';
-
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, company, engagementType: engagement, serviceType: service, projectDetails: details })
-        });
-
-        const data = await res.json();
-        statusDiv.classList.remove('hidden');
-        statusDiv.innerHTML = `<span class="text-emerald-400 font-bold">✓ Thank you, ${name}!</span><br/>${data.message || 'Your inquiry has been received. Delbert Aud will contact you shortly.'}`;
-      } catch (err) {
-        console.error(err);
-        statusDiv.classList.remove('hidden');
-        statusDiv.innerHTML = `<span class="text-emerald-400 font-bold">✓ Thank you, ${name}!</span><br/>Your inquiry has been registered. Delbert Aud will get back to you at ${email}.`;
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerText = 'Submit Consultation Inquiry';
-      }
-    }
-
-    // Run initial ROI calc on page load
-    calculateRoi();
-  </script>
-
-</body>
+    <!-- Main Vanilla JavaScript Entry Script -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
