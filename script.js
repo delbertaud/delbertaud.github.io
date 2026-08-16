@@ -13,11 +13,11 @@ const PROJECTS_DATA = {
     impact: "Cut manual data analysis time by 75% while keeping all proprietary data 100% on-premises."
   },
   arduino: {
-    title: "Automated Hardware Liquid Filling Station",
+    title: "Automated Liquid Filling Station",
     category: "IoT & Hardware Automation",
-    desc: "Architected an industrial IoT precision fluid dispensing system using custom Arduino microcontrollers, flow meters, load sensors, and relay valves. Programmed in optimized C/C++ with robust fault-detection algorithms and real-time calibration.",
-    tech: ["Arduino", "C++", "Hardware IoT", "Relay Control", "Sensors"],
-    impact: "Reduced fluid material waste by over 40% with sub-milliliter precision repeatability."
+    desc: "Engineered for speed, consistency, and absolute repeatability, the Automated Liquid Filling Station brings professional precision to every mix. By utilizing direct weight feedback from an integrated scale directly to the central control box, the system measures every ingredient by mass rather than volume—eliminating variances caused by liquid density, temperature, or air bubbles. Dedicated dual-pump channels ensure synchronized, cross-contamination-free dispensing for both soda and liquor, topping off every glass to perfection down to the exact gram.",
+    tech: ["Arduino", "C++", "Weight Scale Feedback", "Dual-Pump Control", "Hardware IoT", "Relay Control"],
+    impact: "Eliminates volume variances with gram-precise mass measurement and zero-cross-contamination dispensing."
   },
   sumreyes: {
     title: "Enterprise Avaya Telephony Hub (Sumreyes)",
