@@ -487,8 +487,8 @@ code, pre {
 }
 
 .hero-video-card {
-  width: 100%;
-  max-width: 360px;
+  width: 360px;
+  max-width: 100%;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
@@ -565,7 +565,6 @@ code, pre {
   justify-content: center;
   align-items: center;
   aspect-ratio: 9 / 16;
-  max-height: 520px;
   overflow: hidden;
 }
 
