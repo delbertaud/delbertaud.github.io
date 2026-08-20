@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initProjectModals();
   initScrollSpy();
+  initRoiCalculator();
 });
 
 /* ==========================================================================
@@ -232,4 +233,76 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 4000);
+}
+
+/* ==========================================================================
+   Process ROI Calculator
+   ========================================================================== */
+function calculateROI() {
+  const hoursInput = document.getElementById('hoursPerWeek');
+  const teamInput = document.getElementById('teamSize');
+  const rateInput = document.getElementById('hourlyRate');
+  const efficiencyInput = document.getElementById('autoEfficiency');
+
+  if (!hoursInput || !teamInput || !rateInput || !efficiencyInput) return;
+
+  const hoursPerWeek = parseFloat(hoursInput.value) || 0;
+  const teamSize = parseFloat(teamInput.value) || 0;
+  const hourlyRate = parseFloat(rateInput.value) || 0;
+  const autoEfficiency = (parseFloat(efficiencyInput.value) || 80) / 100;
+
+  // Update Slider Label Displays
+  const hoursVal = document.getElementById('hoursVal');
+  const teamVal = document.getElementById('teamVal');
+  const rateVal = document.getElementById('rateVal');
+  const efficiencyVal = document.getElementById('efficiencyVal');
+
+  if (hoursVal) hoursVal.textContent = `${hoursPerWeek} hrs`;
+  if (teamVal) teamVal.textContent = `${teamSize} ${teamSize === 1 ? 'person' : 'people'}`;
+  if (rateVal) rateVal.textContent = `$${hourlyRate} / hr`;
+  if (efficiencyVal) efficiencyVal.textContent = `${Math.round(autoEfficiency * 100)}%`;
+
+  // Formulas (52 working weeks per year)
+  const totalWeeklyHours = hoursPerWeek * teamSize;
+  const annualManualHours = totalWeeklyHours * 52;
+  const annualSpend = annualManualHours * hourlyRate;
+  const annualHoursSaved = annualManualHours * autoEfficiency;
+  const annualDollarSavings = annualSpend * autoEfficiency;
+
+  // Payback calculation based on standard automation setup ($20,000 reference)
+  const estimatedSetupCost = 20000;
+  const monthlySavings = annualDollarSavings / 12;
+  const paybackMonths = monthlySavings > 0 ? (estimatedSetupCost / monthlySavings).toFixed(1) : 0;
+
+  // Format Currency & Numbers
+  const currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  const numberFormatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+
+  // Update Output Nodes
+  const annualDollarNode = document.getElementById('annualDollarSavings');
+  const annualHoursNode = document.getElementById('annualHoursSaved');
+  const currentSpendNode = document.getElementById('currentSpend');
+  const annualManualHoursNode = document.getElementById('annualManualHours');
+  const paybackNode = document.getElementById('paybackMonths');
+
+  if (annualDollarNode) annualDollarNode.textContent = currencyFormatter.format(annualDollarSavings);
+  if (annualHoursNode) annualHoursNode.textContent = `${numberFormatter.format(annualHoursSaved)} hrs`;
+  if (currentSpendNode) currentSpendNode.textContent = currencyFormatter.format(annualSpend);
+  if (annualManualHoursNode) annualManualHoursNode.textContent = `${numberFormatter.format(annualManualHours)} hrs/yr`;
+  if (paybackNode) paybackNode.textContent = paybackMonths > 0 ? `< ${paybackMonths} Months` : 'Immediate';
+}
+
+function initRoiCalculator() {
+  const hoursInput = document.getElementById('hoursPerWeek');
+  const teamInput = document.getElementById('teamSize');
+  const rateInput = document.getElementById('hourlyRate');
+  const efficiencyInput = document.getElementById('autoEfficiency');
+
+  if (!hoursInput || !teamInput || !rateInput || !efficiencyInput) return;
+
+  [hoursInput, teamInput, rateInput, efficiencyInput].forEach(input => {
+    input.addEventListener('input', calculateROI);
+  });
+
+  calculateROI();
 }
