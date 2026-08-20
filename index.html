@@ -65,6 +65,7 @@
   <!-- Hero Section -->
   <section class="section hero-section" id="hero">
     <div class="container hero-grid">
+      <!-- Left Column: Hero Content -->
       <div class="hero-content">
         <div class="hero-badge">
           <span class="pulse-dot"></span>
@@ -83,6 +84,40 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <span>Contact Delbert</span>
           </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Presentation Video -->
+      <div class="hero-media-wrapper" id="heroPresentationMedia">
+        <div class="hero-video-card">
+          <div class="video-card-header">
+            <div class="video-card-badge">
+              <span class="video-pulse-dot"></span>
+              <span>Executive Briefing</span>
+            </div>
+            <span class="video-duration-tag">0:10 • AI Architecture</span>
+          </div>
+
+          <div class="video-player-frame">
+            <video 
+              id="heroPresentationVideo" 
+              class="hero-video-element"
+              controls
+              playsinline
+              preload="metadata"
+              title="Delbert Aud - Presentation Video"
+            >
+              <source src="presentation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="video-card-footer">
+            <div class="video-info">
+              <span class="video-author-name">Delbert Aud</span>
+              <span class="video-desc-line">Visionary AI Automation &amp; Solutions Architect</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
